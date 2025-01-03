@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #121212;
+  --foreground: #232323;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +18,9 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  @apply px-4 py-2 text-white rounded-lg bg-[#303F9F] transition-all duration-200
+  hover:bg-[#2F3C8E] flex gap-x-2 items-center;
 }
