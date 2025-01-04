@@ -1,5 +1,5 @@
 'use client';
-import { redirect } from 'next/navigation'
+import { redirect, RedirectType } from 'next/navigation'
 
 const WelcomeSection = () => {
   return (
@@ -18,7 +18,7 @@ const WelcomeSection = () => {
             2021 winner of the Best Team Spirit award, we are always working
             hard to make your university life as fun & enriching as possible.
           </p>
-          <button  onClick={() => redirect("https://discord.gg/unswttgsoc", "push")} className="button">See More!</button>
+          <button  onClick={() => redirect("https://discord.gg/unswttgsoc", RedirectType.push)} className="button">See More!</button>
         </div>
 
         <div className="flex-1 max-w-[500px] order-1 lg:order-2">
