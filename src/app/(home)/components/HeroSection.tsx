@@ -44,6 +44,7 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* I think we should change this part to be different to the anime@uts website both in colours and shape design */}
       <div className="absolute left-0 right-0 bottom-0 h-[10vh]">
         <div className="absolute w-full h-[500%] skew-y-[-10deg] bg-[#303F9F]" />
         <div className="absolute w-full h-[500%] skew-y-[-6deg] bg-[#121212]" />
