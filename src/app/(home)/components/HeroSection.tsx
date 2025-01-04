@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <img
-          src="/hero.jpg"
+          src="/hero.webp"
           alt="hero"
           className="w-full h-full object-cover object-left"
         />
