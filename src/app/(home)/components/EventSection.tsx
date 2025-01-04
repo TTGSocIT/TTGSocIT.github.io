@@ -19,7 +19,7 @@ const EventSection = () => {
           screenings, charity events, food events, beach visits, camp, parties
           and so much more! All of our internal events are free to members! We
           are always thinking about new fresh event ideas to bring our members
-          more fun and experiences they haven't had before.
+          more fun and experiences they haven&apos;t had before.
         </p>
       </div>
 
