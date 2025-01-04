@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <img
-          src="/hero.webp"
+          src="/hero.jpg"
           alt="hero"
           className="w-full h-full object-cover object-left"
         />
@@ -22,7 +22,7 @@ const HeroSection = () => {
 
       <div className="text-white flex flex-col items-center gap-y-5">
         <div className="font-bold text-7xl">UNSW TTGSoc</div>
-        <p>For everyone interested in Boardgames & TCG at UNSW</p>
+        <p>For everyone interested in Boardgames, RPGs & TCG at UNSW</p>
 
         <div className="flex gap-x-2">
           <button className="button">
