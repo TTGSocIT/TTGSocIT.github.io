@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+//import { useState } from "react";
 
 const nav = [
   {
@@ -20,7 +20,7 @@ const nav = [
 
 const Header = () => {
   const param = usePathname();
-  const [open, setOpen] = useState<boolean>(false);
+  //const [open, setOpen] = useState<boolean>(false);
 
   return (
     <nav className="fixed w-full z-40 bg-foreground text-foreground shadow-md h-16">
