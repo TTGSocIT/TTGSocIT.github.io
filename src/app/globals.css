@@ -20,7 +20,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.button {
+.button { /* Can alter the button colours here */
   @apply px-4 py-2 text-white rounded-lg bg-[#303F9F] transition-all duration-200
   hover:bg-[#2F3C8E] flex gap-x-2 items-center;
 }
