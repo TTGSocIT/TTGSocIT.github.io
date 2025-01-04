@@ -1,10 +1,9 @@
-'use client';
+"use client";
+
 import { FaDiscord } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { redirect, RedirectType } from 'next/navigation';
-
-
+import { redirect, RedirectType } from "next/navigation";
 
 /**
  * The Main Page of the Website root.
@@ -13,7 +12,7 @@ const HeroSection = () => {
   return (
     <div className="min-h-screen w-full px-5 relative overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
+        <div className="absolute inset-0 bg-black bg-opacity-70" />
         <img
           src="/hero.webp"
           alt="hero"
@@ -21,10 +20,15 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="text-white flex flex-col items-center gap-y-5">
-        <div className="font-bold text-7xl text-center">UNSW Tabletop Games Society</div>
-        <p>For everyone interested in Boardgames, RPGs & TCG at UNSW</p>
+      <div className="text-white flex flex-col items-center gap-y-5 p-10 max-w-5xl">
+        <div className="font-bold text-5xl md:text-7xl text-center">
+          UNSW Tabletop Games Society
+        </div>
+        <p className="text-center">
+          For everyone interested in Boardgames, RPGs & TCG at UNSW
+        </p>
 
+<<<<<<< HEAD
         <div className="flex gap-x-2"> 
           <button  style={{marginRight: "1rem", backgroundColor: "rgb(48 63 159)"}} className="flex align-center rounded-md text-center px-6 py-3 hover:brightness-125 transition-all duration-100" onClick={() => redirect("https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT", RedirectType.push)}>
             Join Us
@@ -40,6 +44,56 @@ const HeroSection = () => {
           
           <button style={{backgroundColor: "#C13584"}} className="flex align-center p-2 rounded-md aspect-square hover:brightness-125 transition-all duration-100" onClick={() => redirect("https://www.instagram.com/unswttgsoc/", RedirectType.push)}>
             <FaInstagram style={{width: "1.5em", height: "100%"}} />
+=======
+        <div className="flex gap-x-2">
+          <button
+            style={{ marginRight: "1rem" }}
+            className="button"
+            onClick={() =>
+              redirect(
+                "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT",
+                RedirectType.push
+              )
+            }
+          >
+            Join Us
+          </button>
+
+          <button
+            style={{ backgroundColor: "#7289DA" }}
+            className="button"
+            onClick={() =>
+              redirect("https://discord.gg/unswttgsoc", RedirectType.push)
+            }
+          >
+            <FaDiscord style={{ width: "100%", height: "100%" }} />
+          </button>
+
+          <button
+            style={{ backgroundColor: "#1877F2" }}
+            className="button"
+            onClick={() =>
+              redirect(
+                "https://www.facebook.com/unswttgsoc/",
+                RedirectType.push
+              )
+            }
+          >
+            <FaFacebookF />
+          </button>
+
+          <button
+            style={{ backgroundColor: "#C13584" }}
+            className="button"
+            onClick={() =>
+              redirect(
+                "https://www.instagram.com/unswttgsoc/",
+                RedirectType.push
+              )
+            }
+          >
+            <FaInstagram />
+>>>>>>> v1.0.0
           </button>
         </div>
       </div>
