@@ -2,8 +2,7 @@
 import { FaDiscord } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { redirect, RedirectType } from 'next/navigation'
-
+import { redirect, RedirectType } from 'next/navigation';
 
 
 
@@ -27,7 +26,9 @@ const HeroSection = () => {
         <p>For everyone interested in Boardgames, RPGs & TCG at UNSW</p>
 
         <div className="flex gap-x-2"> 
-          <button className="button" onClick={() => redirect("https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT", RedirectType.push)}>Join Us</button>
+          <button  style={{marginRight: "1rem"}} className="button" onClick={() => redirect("https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT", RedirectType.push)}>
+            Join Us
+          </button>
           
           <button style={{backgroundColor: "#7289DA"}} className="button" onClick={() => redirect("https://discord.gg/unswttgsoc", RedirectType.push)}>
             <FaDiscord style={{width: "100%", height: "100%"}} />

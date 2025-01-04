@@ -7,7 +7,7 @@ const WelcomeSection = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-x-20 gap-y-5">
         <div className="flex-1 max-w-[500px] flex flex-col gap-y-3 order-2 lg:order-1">
           <div className="font-bold text-3xl text-primary">
-            Welcome to UNSW Tabletop Games Society
+            Welcome to The UNSW Tabletop Games Society
           </div>
           <p>
             We are the social club you are looking for if you are even slightly
