@@ -1,5 +1,5 @@
 "use client";
-
+import { redirect, RedirectType } from 'next/navigation';
 import { usePathname } from "next/navigation";
 //import { useState } from "react";
 
@@ -45,7 +45,7 @@ const Header = () => {
 
         <div className="bg-neutral-300 w-[1px] h-6 opacity-20" />
 
-        <div className="relative flex items-center cursor-pointer">
+        <div className="relative flex items-center cursor-pointer" onClick={() => redirect("https://discord.gg/unswttgsoc", RedirectType.push)}>
           <img src="/discord.svg" alt="discord" className="h-4 w-auto" />
         </div>
 
