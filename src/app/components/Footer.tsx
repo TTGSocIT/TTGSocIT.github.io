@@ -13,12 +13,11 @@ const Footer = () => {
 
       <div className="px-5 pt-14 pb-3 flex flex-col items-center justify-center gap-y-5">
         <div>
-          © 2001-2024 anime@UTS. Images and video are the property of their
+          © 2024 UNSW Tabletop Games Society. Images and video are the property of their
           respective creators and owners.
         </div>
         <div>
-          Developed and maintained by the 2021-2023 Anime@UTS Webmaster Leo
-          (Discord: @arduano)
+          Developed and maintained by the 2025 UNSW Tabletop Games Society IT Subcommittee
         </div>
       </div>
     </footer>

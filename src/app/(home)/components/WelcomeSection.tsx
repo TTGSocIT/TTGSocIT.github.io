@@ -1,10 +1,13 @@
+'use client';
+import { redirect, RedirectType } from 'next/navigation'
+
 const WelcomeSection = () => {
   return (
     <div className="text-white py-20 px-5 flex flex-col items-center">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-x-20 gap-y-5">
         <div className="flex-1 max-w-[500px] flex flex-col gap-y-3 order-2 lg:order-1">
           <div className="font-bold text-3xl text-primary">
-            Welcome to Anime@UTS!
+            Welcome to The UNSW Tabletop Games Society
           </div>
           <p>
             We are the social club you are looking for if you are even slightly
@@ -15,7 +18,7 @@ const WelcomeSection = () => {
             2021 winner of the Best Team Spirit award, we are always working
             hard to make your university life as fun & enriching as possible.
           </p>
-          <button className="button">See More!</button>
+          <button  onClick={() => redirect("https://discord.gg/unswttgsoc", RedirectType.push)} className="button">See More!</button>
         </div>
 
         <div className="flex-1 max-w-[500px] order-1 lg:order-2">
