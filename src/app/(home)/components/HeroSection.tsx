@@ -1,3 +1,13 @@
+'use client';
+import { FaDiscord } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { redirect } from 'next/navigation'
+
+
+
+
+
 const HeroSection = () => {
   return (
     <div className="min-h-screen w-full px-5 relative overflow-hidden flex items-center justify-center">
@@ -11,11 +21,22 @@ const HeroSection = () => {
       </div>
 
       <div className="text-white flex flex-col items-center gap-y-5">
-        <div className="font-bold text-7xl">TCG@UNSW</div>
+        <div className="font-bold text-7xl">UNSW TTGSoc</div>
         <p>For everyone interested in Boardgames & TCG at UNSW</p>
 
         <div className="flex gap-x-2">
-          <button className="button">Join Us</button>
+          <button className="button">
+            Join Us
+          </button>
+          <button style={{backgroundColor: "#7289DA"}} className="button" onClick={() => redirect("https://discord.gg/unswttgsoc", "push")}>
+            <FaDiscord style={{width: "100%", height: "100%"}} />
+          </button>
+          <button style={{backgroundColor: "#1877F2"}} className="button"  onClick={() => redirect("https://www.facebook.com/unswttgsoc/", "push")}>
+            <FaFacebookF />
+          </button>
+          <button style={{backgroundColor: "#C13584"}} className="button" onClick={() => redirect("https://www.instagram.com/unswttgsoc/", "push")}>
+            <FaInstagram />
+          </button>
         </div>
       </div>
 
