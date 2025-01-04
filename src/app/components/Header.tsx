@@ -1,6 +1,7 @@
 "use client";
-
+import { redirect, RedirectType } from 'next/navigation';
 import { usePathname } from "next/navigation";
+import Link from 'next/link';
 //import { useState } from "react";
 
 const nav = [
@@ -18,12 +19,30 @@ const nav = [
   },
 ];
 
+
+
+/**
+ * Website Header Bar
+ */
 const Header = () => {
   const param = usePathname();
   //const [open, setOpen] = useState<boolean>(false);
 
   return (
     <nav className="fixed w-full z-40 bg-foreground text-foreground shadow-md h-16">
+      {/* Logo Button */}
+      <div className='absolute left-4 top-0 bottom-0 flex items-center justify-center z-10'
+      >
+        <Link className="h-8 w-8 lg:h-12 lg:w-12 cursor-pointer" href="/" passHref>
+          <img
+            src="logo-blue.svg"
+            alt="Our Logo"
+            className='h-full w-full'
+          />
+        </Link>
+      </div>
+
+      {/* Tabs */}
       <div className="hidden lg:flex gap-x-5 absolute inset-0 items-center justify-center">
         {nav.map(({ name, href }) => (
           <a href={href} className="relative group" key={name}>
@@ -45,7 +64,7 @@ const Header = () => {
 
         <div className="bg-neutral-300 w-[1px] h-6 opacity-20" />
 
-        <div className="relative flex items-center cursor-pointer">
+        <div className="relative flex items-center cursor-pointer" onClick={() => redirect("https://discord.gg/unswttgsoc", RedirectType.push)}>
           <img src="/discord.svg" alt="discord" className="h-4 w-auto" />
         </div>
 

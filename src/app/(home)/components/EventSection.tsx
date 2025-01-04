@@ -11,15 +11,10 @@ const EventSection = () => {
     <div className="bg-black py-20 flex flex-col items-center justify-center gap-y-12">
       <div className="flex flex-col gap-y-3 text-center max-w-[1000px] px-5">
         <div className="font-bold text-3xl text-primary">
-          Events at anime@UTS!
+          Events at UNSW TTGSoc
         </div>
         <p className="text-white">
-          We feature a wide variety of events from Anime Trivias, Arcade tours,
-          Gaming Events, Karaoke, Chill sessions, Movie outings, Dinners, anime
-          screenings, charity events, food events, beach visits, camp, parties
-          and so much more! All of our internal events are free to members! We
-          are always thinking about new fresh event ideas to bring our members
-          more fun and experiences they haven&apos;t had before.
+         (TODO UPDATE TEXT HERE)
         </p>
       </div>
 

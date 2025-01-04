@@ -28,58 +28,26 @@ const HeroSection = () => {
           For everyone interested in Boardgames, RPGs & TCG at UNSW
         </p>
 
-        <div className="flex gap-x-2">
-          <button
-            style={{ marginRight: "1rem" }}
-            className="button"
-            onClick={() =>
-              redirect(
-                "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT",
-                RedirectType.push
-              )
-            }
-          >
+        <div className="flex gap-x-2"> 
+          <button  style={{marginRight: "1rem", backgroundColor: "rgb(48 63 159)"}} className="flex align-center rounded-md text-center px-6 py-3 hover:brightness-125 transition-all duration-100" onClick={() => redirect("https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT", RedirectType.push)}>
             Join Us
           </button>
-
-          <button
-            style={{ backgroundColor: "#7289DA" }}
-            className="button"
-            onClick={() =>
-              redirect("https://discord.gg/unswttgsoc", RedirectType.push)
-            }
-          >
-            <FaDiscord style={{ width: "100%", height: "100%" }} />
+          
+          <button style={{backgroundColor: "#7289DA", padding: "10px"}} className="flex align-center p-2 rounded-md aspect-square hover:brightness-125 transition-all duration-100" onClick={() => redirect("https://discord.gg/unswttgsoc", RedirectType.push)}>
+            <FaDiscord style={{width: "1.5em", height: "100%"}} />
           </button>
-
-          <button
-            style={{ backgroundColor: "#1877F2" }}
-            className="button"
-            onClick={() =>
-              redirect(
-                "https://www.facebook.com/unswttgsoc/",
-                RedirectType.push
-              )
-            }
-          >
-            <FaFacebookF />
+          
+          <button style={{backgroundColor: "#1877F2"}} className="flex align-center p-2 rounded-md aspect-square hover:brightness-125 transition-all duration-100"  onClick={() => redirect("https://www.facebook.com/unswttgsoc/", RedirectType.push)}>
+            <FaFacebookF style={{width: "1.5em", height: "100%"}} />
           </button>
-
-          <button
-            style={{ backgroundColor: "#C13584" }}
-            className="button"
-            onClick={() =>
-              redirect(
-                "https://www.instagram.com/unswttgsoc/",
-                RedirectType.push
-              )
-            }
-          >
-            <FaInstagram />
+          
+          <button style={{backgroundColor: "#C13584"}} className="flex align-center p-2 rounded-md aspect-square hover:brightness-125 transition-all duration-100" onClick={() => redirect("https://www.instagram.com/unswttgsoc/", RedirectType.push)}>
+            <FaInstagram style={{width: "1.5em", height: "100%"}} />
           </button>
         </div>
       </div>
 
+      {/* I think we should change this part to be different to the anime@uts website both in colours and shape design */}
       <div className="absolute left-0 right-0 bottom-0 h-[10vh]">
         <div className="absolute w-full h-[500%] skew-y-[-10deg] bg-[#303F9F]" />
         <div className="absolute w-full h-[500%] skew-y-[-6deg] bg-[#121212]" />
