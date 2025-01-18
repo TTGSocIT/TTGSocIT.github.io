@@ -1,6 +1,6 @@
 type InputType = {
-    title: String;
-    imgPath: String;
+    title: string;
+    imgPath: string;
 }
 
 

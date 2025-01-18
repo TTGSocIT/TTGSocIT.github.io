@@ -1,4 +1,3 @@
-import { JSX } from "react"
 import ImageScrollTitle from "./ImageScrollTitle"
 
 
@@ -10,19 +9,19 @@ import ImageScrollTitle from "./ImageScrollTitle"
  */
 
 type inputType = {
-    title: String,
-    titleImgPath: String,
+    title: string,
+    titleImgPath: string,
     eventslistHashmap: eventsMap[]
     startIdx?: number,
 }
 
 type eventsMap = {
-    title: String,
-    description: String,
+    title: string,
+    description: string,
 
-    timeStr?: String,
-    locationStr?: String,
-    updatedLast?: String,
+    timeStr?: string,
+    locationStr?: string,
+    updatedLast?: string,
     optionalBottomJsx?: React.ReactElement, // IDK the type here for JSX ima do any
 
     photoPath: string,
@@ -54,7 +53,7 @@ export default function EventsSection({title, titleImgPath, eventslistHashmap, s
 
             <div className ="mt-10 flex flex-col items-center gap-20 px-10 md:px-[15dvw]">
                { eventslistHashmap.map(({title, description, timeStr, locationStr, updatedLast, photoPath, photoAlt, optionalBottomJsx}, idx) => (
-                <div className={`flex flex-col ${(idx + (startIdx || 0)) %  2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} w-full justify-center gap-5 md:gap-10 md:min-h-64`}>
+                <div key={`event-${idx}`} className={`flex flex-col ${(idx + (startIdx || 0)) %  2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} w-full justify-center gap-5 md:gap-10 md:min-h-64`}>
                     
                     {/* IMAGE  */}
                     <div className="w-full md:w-1/2 md:h-full aspect-video rounded-lg overflow-hidden">
