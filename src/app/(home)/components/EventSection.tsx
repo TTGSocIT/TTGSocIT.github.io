@@ -13,9 +13,7 @@ const EventSection = () => {
         <div className="font-bold text-3xl text-primary">
           Events at UNSW TTGSoc
         </div>
-        <p className="text-white">
-         (TODO UPDATE TEXT HERE)
-        </p>
+        <p className="text-white">(TODO UPDATE TEXT HERE)</p>
       </div>
 
       <Swiper
@@ -23,7 +21,7 @@ const EventSection = () => {
         slidesPerView={5}
         loop
         autoplay
-        className="w-full"
+        className="w-full px-5"
         breakpoints={{
           1300: {
             slidesPerView: 4,
@@ -39,15 +37,6 @@ const EventSection = () => {
           },
         }}
       >
-        <SwiperSlide>
-          <EventCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <EventCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <EventCard />
-        </SwiperSlide>
         <SwiperSlide>
           <EventCard />
         </SwiperSlide>
