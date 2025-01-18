@@ -14,6 +14,10 @@ const nav = [
     href: "/about",
   },
   {
+    name: "Events",
+    href: "/events",
+  },
+  {
     name: "Join",
     href: "/join",
   },
