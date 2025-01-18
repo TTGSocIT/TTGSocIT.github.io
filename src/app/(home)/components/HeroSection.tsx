@@ -28,21 +28,53 @@ const HeroSection = () => {
           For everyone interested in Boardgames, RPGs & TCG at UNSW
         </p>
 
-        <div className="flex gap-x-2"> 
-          <button  style={{marginRight: "1rem", backgroundColor: "rgb(48 63 159)"}} className="flex align-center rounded-md text-center px-6 py-3 hover:brightness-125 transition-all duration-100" onClick={() => redirect("https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT", RedirectType.push)}>
+        <div className="flex gap-x-2">
+          <button
+            className="bg-[#303F9F] flex align-center rounded-md text-center px-6 py-3 hover:brightness-125 transition-all duration-100"
+            onClick={() =>
+              redirect(
+                "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT",
+                RedirectType.push
+              )
+            }
+          >
             Join Us
           </button>
-          
-          <button style={{backgroundColor: "#7289DA", padding: "10px"}} className="flex align-center p-2 rounded-md aspect-square hover:brightness-125 transition-all duration-100" onClick={() => redirect("https://discord.gg/unswttgsoc", RedirectType.push)}>
-            <FaDiscord style={{width: "1.5em", height: "100%"}} />
+
+          <button
+            className="bg-[#7289DA] flex justify-center items-center p-2 rounded-md
+            hover:brightness-125 transition-all duration-100 size-12"
+            onClick={() =>
+              redirect("https://discord.gg/unswttgsoc", RedirectType.push)
+            }
+          >
+            <FaDiscord className="text-2xl" />
           </button>
-          
-          <button style={{backgroundColor: "#1877F2"}} className="flex align-center p-2 rounded-md aspect-square hover:brightness-125 transition-all duration-100"  onClick={() => redirect("https://www.facebook.com/unswttgsoc/", RedirectType.push)}>
-            <FaFacebookF style={{width: "1.5em", height: "100%"}} />
+
+          <button
+            className="bg-[#1877F2] flex justify-center items-center p-2 rounded-md
+            hover:brightness-125 transition-all duration-100 size-12"
+            onClick={() =>
+              redirect(
+                "https://www.facebook.com/unswttgsoc/",
+                RedirectType.push
+              )
+            }
+          >
+            <FaFacebookF className="text-xl" />
           </button>
-          
-          <button style={{backgroundColor: "#C13584"}} className="flex align-center p-2 rounded-md aspect-square hover:brightness-125 transition-all duration-100" onClick={() => redirect("https://www.instagram.com/unswttgsoc/", RedirectType.push)}>
-            <FaInstagram style={{width: "1.5em", height: "100%"}} />
+
+          <button
+            className="bg-[#C13584] flex justify-center items-center p-2 rounded-md
+            hover:brightness-125 transition-all duration-100 size-12"
+            onClick={() =>
+              redirect(
+                "https://www.instagram.com/unswttgsoc/",
+                RedirectType.push
+              )
+            }
+          >
+            <FaInstagram className="text-2xl" />
           </button>
         </div>
       </div>
