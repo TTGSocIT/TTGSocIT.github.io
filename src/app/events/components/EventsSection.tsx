@@ -52,7 +52,7 @@ export default function EventsSection({title, titleImgPath, eventslistHashmap, s
             <ImageScrollTitle title={title} imgPath={titleImgPath}/> {/* NOTE: CAN CHANGE BACKGROUND IMG HERE */}
             
 
-            <div className ="mt-5 flex flex-col items-center gap-20 px-10 md:px-[15dvw]">
+            <div className ="mt-10 flex flex-col items-center gap-20 px-10 md:px-[15dvw]">
                { eventslistHashmap.map(({title, description, timeStr, locationStr, updatedLast, photoPath, photoAlt, optionalBottomJsx}, idx) => (
                 <div className={`flex flex-col ${(idx + (startIdx || 0)) %  2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} w-full justify-center gap-5 md:gap-10 md:min-h-64`}>
                     
