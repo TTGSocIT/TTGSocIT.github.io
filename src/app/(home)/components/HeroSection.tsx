@@ -20,11 +20,11 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="text-white flex flex-col items-center gap-y-5 p-10 max-w-5xl">
-        <div className="font-bold text-5xl md:text-7xl text-center">
+      <div className="flex flex-col items-center gap-y-5 p-10 max-w-5xl">
+        <div className="text-[#0042AB] font-bold text-5xl md:text-7xl text-center">
           UNSW Tabletop Games Society
         </div>
-        <p className="text-center">
+        <p className="text-white text-center">
           For everyone interested in Boardgames, RPGs & TCG at UNSW
         </p>
 
@@ -82,7 +82,7 @@ const HeroSection = () => {
       {/* I think we should change this part to be different to the anime@uts website both in colours and shape design */}
       <div className="absolute left-0 right-0 bottom-0 h-[10vh]">
         <div className="absolute w-full h-[500%] skew-y-[-10deg] bg-[#303F9F]" />
-        <div className="absolute w-full h-[500%] skew-y-[-6deg] bg-[#121212]" />
+        <div className="absolute w-full h-[500%] skew-y-[-6deg] bg-white" />
       </div>
     </div>
   );
