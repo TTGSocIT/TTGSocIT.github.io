@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import EventCard from "@/app/(home)/components/EventCard";
+import EventCard1 from "@/app/(home)/components/EventCard1";
 
 const EventSection = () => {
   return (
@@ -41,7 +42,7 @@ const EventSection = () => {
           <EventCard />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard />
+          <EventCard1 name = "yo" image = "/hero.webp" />
         </SwiperSlide>
         <SwiperSlide>
           <EventCard />
