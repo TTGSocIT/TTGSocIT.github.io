@@ -32,7 +32,9 @@ export default function WhoWeAre() {
         />
 
         {executives.map((executive) => (
-          <div>{`${executive.role}: ${executive.name}`}</div>
+          <div
+            key={executive.name}
+          >{`${executive.role}: ${executive.name}`}</div>
         ))}
       </div>
     </div>
