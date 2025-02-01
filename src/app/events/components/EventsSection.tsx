@@ -8,14 +8,14 @@ import ImageScrollTitle from "./ImageScrollTitle"
  * Each entry = 1 item
  */
 
-type inputType = {
+type Props = {
     title: string,
     titleImgPath: string,
-    eventslistHashmap: eventsMap[]
+    eventslistHashmap: EventsMap[]
     startIdx?: number,
 }
 
-type eventsMap = {
+type EventsMap = {
     title: string,
     description: string,
 
@@ -30,7 +30,7 @@ type eventsMap = {
 
 
 
-export default function EventsSection({title, titleImgPath, eventslistHashmap, startIdx}: inputType) {
+export default function EventsSection({title, titleImgPath, eventslistHashmap, startIdx}: Props) {
     /**
      * Object that Creates an Event Section
      * 
