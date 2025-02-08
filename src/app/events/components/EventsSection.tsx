@@ -100,26 +100,28 @@ export default function EventsSection({
               } w-full justify-center gap-5 md:gap-10 md:min-h-64`}
             >
               {/* IMAGE  */}
-              <div className="w-full md:w-1/2 md:h-full aspect-video rounded-lg overflow-hidden">
+              <div className="w-full md:w-1/2 md:h-full my-auto aspect-video rounded-lg overflow-hidden">
                 <img src={photoPath} alt={photoAlt} />
               </div>
 
               <div className="w-full md:w-1/2 md:h-full text-center md:text-left">
-                <h1 className="font-bold text-4xl text-primary">{title}</h1>
+                <h1 className="font-bold text-4xl text-titleColor">{title}</h1>
                 {(timeStr || locationStr) && (
                   <div className="flex flex-row gap-10 justify-center md:justify-start italic">
-                    {timeStr && <h2 className="text-black">{timeStr}</h2>}
+                    {timeStr && (
+                      <h2 className="text-subTitleColor">{timeStr}</h2>
+                    )}
                     {locationStr && (
-                      <h2 className="text-black">{locationStr}</h2>
+                      <h2 className="text-subTitleColor">{locationStr}</h2>
                     )}
                   </div>
                 )}
                 {updatedLast && (
-                  <h3 className="opacity-50 italic text-black">
+                  <h3 className="opacity-50 italic text-subTitleColor">
                     Last Updated: {updatedLast}
                   </h3>
                 )}
-                <p className="mt-3 text-black">{description}</p>
+                <p className="mt-3">{description}</p>
                 {optionalBottomJsx}
               </div>
             </div>

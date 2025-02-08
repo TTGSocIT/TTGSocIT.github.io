@@ -21,10 +21,10 @@ const nav = [
     name: "Join",
     href: "/join",
   },
-  {
-    name: "Contact",
-    href: "/contact",
-  },
+  // {
+  //   name: "Contact",
+  //   href: "/contact",
+  // },
 ];
 
 /**

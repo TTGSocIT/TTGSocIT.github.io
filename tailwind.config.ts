@@ -12,6 +12,19 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#0098FE",
+
+        textColor: "#232323",
+        textColorBg: "#ffffff",
+        subTitleColor: "#808080",
+        subTitleColorBg: "#808080",
+        titleColor: "#0042ab",
+        titleColorBg: "#0075f3",
+
+        accentColor: "#4d9d01",
+        eventColorBg: "#808080",
+
+        panelColor: "#232323",
+        panelSecondaryColor: "#ffffff",
       },
     },
   },
