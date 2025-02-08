@@ -1,8 +1,9 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 
 import EventCard from "@/app/(home)/components/EventCard";
 import EventCard1 from "@/app/(home)/components/EventCard1";
@@ -18,6 +19,8 @@ const EventSection = () => {
       </div>
 
       <Swiper
+        navigation={true}
+        modules={[Navigation]}
         spaceBetween={50}
         slidesPerView={5}
         loop
@@ -42,7 +45,7 @@ const EventSection = () => {
           <EventCard />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name = "yo" image = "/hero.webp" />
+          <EventCard1 name="yo" image="/hero.webp" />
         </SwiperSlide>
         <SwiperSlide>
           <EventCard />
