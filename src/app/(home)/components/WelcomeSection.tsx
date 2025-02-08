@@ -29,7 +29,7 @@ const WelcomeSection = () => {
         </div>
 
         <div className="flex-1 max-w-[500px] order-1 lg:order-2">
-          <img src="/Friday_Boardgames.webp" alt="welcome" />
+          <img src="/original froggie.webp" alt="welcome" />
         </div>
       </div>
     </div>
