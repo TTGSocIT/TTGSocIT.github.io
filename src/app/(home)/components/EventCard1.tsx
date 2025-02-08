@@ -1,11 +1,25 @@
+import { titleCaseToId } from "@/app/utils/titleCaseToId";
+import { useCallback } from "react";
+
+import { useRouter } from "next/navigation";
+
 interface EventCardProps {
   name: string;
   image: string;
 }
 
 const EventCard1 = ({ name, image }: EventCardProps) => {
+  const router = useRouter();
+  const handleClick = useCallback(() => {
+    const eventId = titleCaseToId(name);
+    router.push(`/events?event=${eventId}`);
+  }, [name]);
+
   return (
-    <div className="relative group py-5 mx-auto px-3 w-full flex items-center justify-center">
+    <div
+      className="relative group py-5 mx-auto px-3 w-full flex items-center justify-center"
+      onClick={handleClick}
+    >
       <div
         className="left-1/2 -translate-x-1/2 top-5 absolute bg-foreground w-[300px] h-[210px] rounded-md
           rotate-[7deg] group-hover:rotate-[5deg] transition-all duration-300"
