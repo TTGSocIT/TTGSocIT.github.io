@@ -8,15 +8,27 @@ interface Executive {
 const executives: Executive[] = [
   {
     role: "President",
-    name: "John Smith",
+    name: "Kevin Zhe",
   },
   {
     role: "Vice President",
-    name: "Smith John",
+    name: "Ahmad Farhan Bin Ahmad Faiz",
   },
   {
-    role: "Board gamer",
-    name: "Skelly",
+    role: "Secretary",
+    name: "Chalene Kuklin",
+  },
+  {
+    role: "Arc Delegate",
+    name: "Cassie Eliot",
+  },
+  {
+    role: "Treasurer",
+    name: "Henry Lam",
+  },
+  {
+    role: "Media Executive",
+    name: "Alexander Paou",
   },
 ];
 
@@ -27,7 +39,7 @@ export default function WhoWeAre() {
         <h1 className="text-5xl text-black font-bold">Who We Are</h1>
         <h1 className="text-2xl text-gray-500">Executive Team</h1>
         <CircularImage
-          imagePath="/hero.webp"
+          imagePath="/team.webp"
           altText="Picture of Executive team"
         />
 
