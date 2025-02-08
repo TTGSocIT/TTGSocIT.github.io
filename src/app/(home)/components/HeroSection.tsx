@@ -10,7 +10,7 @@ import { redirect, RedirectType } from "next/navigation";
  */
 const HeroSection = () => {
   return (
-    <div className="min-h-screen w-full px-5 relative overflow-hidden flex items-center justify-center">
+    <div className="min-h-screen w-full px-3 md:px-5 relative overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-black bg-opacity-70" />
         <img
@@ -42,7 +42,7 @@ const HeroSection = () => {
           </button>
 
           <button
-            className="bg-[#7289DA] flex justify-center items-center p-2 rounded-md
+            className="bg-[#7289DA] flex justify-center items-center p-1 md:p-2 rounded-md
             hover:brightness-125 transition-all duration-100 size-12"
             onClick={() =>
               redirect("https://discord.gg/unswttgsoc", RedirectType.push)
@@ -52,7 +52,7 @@ const HeroSection = () => {
           </button>
 
           <button
-            className="bg-[#1877F2] flex justify-center items-center p-2 rounded-md
+            className="bg-[#1877F2] flex justify-center items-center p-1 md:p-2 rounded-md
             hover:brightness-125 transition-all duration-100 size-12"
             onClick={() =>
               redirect(
@@ -65,7 +65,7 @@ const HeroSection = () => {
           </button>
 
           <button
-            className="bg-[#C13584] flex justify-center items-center p-2 rounded-md
+            className="bg-[#C13584] flex justify-center items-center p-1 md:p-2 rounded-md
             hover:brightness-125 transition-all duration-100 size-12"
             onClick={() =>
               redirect(

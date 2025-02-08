@@ -5,7 +5,7 @@ type Props = {
 
 const CircularImage = ({ imagePath, altText }: Props) => {
   return (
-    <div className="relative w-[20vw] h-[20vw] m-8">
+    <div className="relative max-w-[400px] w-full h-auto m-8">
       <div className="absolute inset-0 border-4 border-white rounded-3xl"></div>
       <img
         src={imagePath}
