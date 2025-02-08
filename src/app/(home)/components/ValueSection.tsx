@@ -1,21 +1,42 @@
+import ValueItem from "@/app/(home)/components/ValueItem";
+
 const ValueSection = () => {
   return (
     <div className="text-black py-20 px-5 flex flex-col items-center">
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-x-20 gap-y-5">
-        <div className="flex-1 max-w-[500px] flex flex-col gap-y-3 order-1 lg:order-2">
-          <div className="font-bold text-3xl text-primary">Values...</div>
-          <p>
-            TTGSoc is open to all UNSW members (is this true or is it open to
-            EVERYONE), with a diverse community ranging from fresh first-years
-            to weathered postgrads - even our subcommittee! With our friendly
-            members and huge dDiscord server (with dedicated RPG channels too!)
-            TTGSoc is a safe, welcoming space for everyone to connect over a
-            shared love of tabletop games and all things related.
-          </p>
-        </div>
-
-        <div className="flex-1 max-w-[500px] order-2 lg:order-1">
-          <img src="/welcome.webp" alt="welcome" />
+      <div className="flex flex-col items-center justify-center gap-y-16">
+        <div className="font-bold text-4xl text-titleColor text-center">{`Our Society's Values`}</div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-16 gap-x-24">
+          <ValueItem
+            title="Welcome"
+            description={`We aim to give people a welcoming environment to play any sort of
+            board game or role playing games. Our society is a place where
+            everyone feels at home. If you have any specific niche or are
+            completely new to the genre we have people that are willing to teach
+            you the games and get you familiar with it.`}
+          />
+          <ValueItem
+            title="Inclusivity"
+            description="Inclusiveness is a value that we hold dearly. Regardless of
+            background, identity, or experience level or even if you attend the
+            uni we want everyone to have a fun time at our events. Furthermore,
+            we have a robust grievance policy structure that ensures that if you
+            have any complaint that your voice will be heard."
+          />
+          <ValueItem
+            title="Consistency"
+            description="We’ve been holding weekly gaming sessions since the dawn of time (or
+            whenever the uni permits us), we will continue to do this until UNSW
+            kicks collapses. This consistency allows us to build up a community
+            over time, campaigns to thrive, and players to focus on having fun
+            without worry. Even if you can only come once in a while there will
+            be friendly faces ready for you whenever you are free to swing by."
+          />
+          <ValueItem
+            title="Community"
+            description="We value community and the forming of them, being a multi faceted
+            society, enhancing the community and the comradery is vital for any
+            society to survive"
+          />
         </div>
       </div>
     </div>

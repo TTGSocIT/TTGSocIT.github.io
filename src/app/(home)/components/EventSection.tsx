@@ -17,7 +17,7 @@ const EventSection = () => {
       <div className="absolute bg-black/70 w-full h-full"></div>
 
       <div className="flex flex-col gap-y-3 text-center max-w-[1000px] px-5 z-20">
-        <div className="font-bold text-3xl text-primary">
+        <div className="font-bold text-3xl text-titleColorBg">
           Events at UNSW TTGSoc
         </div>
         <p className="text-white">(TODO UPDATE TEXT HERE)</p>
@@ -56,7 +56,7 @@ const EventSection = () => {
           <EventCard1 name="RPG campaigns" image="/lost_lands_dnd.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name="Collaboration Events" image="/maid_cafe.webp" />
+          <EventCard1 name="AnimeSoc Collab" image="/maid_cafe.webp" />
         </SwiperSlide>
         <SwiperSlide>
           <EventCard1
