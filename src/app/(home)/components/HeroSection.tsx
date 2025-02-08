@@ -21,7 +21,7 @@ const HeroSection = () => {
       </div>
 
       <div className="flex flex-col items-center gap-y-5 p-10 max-w-5xl">
-        <div className="text-[#0042AB] font-bold text-5xl md:text-7xl text-center">
+        <div className="text-[#ffffff] font-bold text-5xl md:text-7xl text-center">
           UNSW Tabletop Games Society
         </div>
         <p className="text-white text-center">
