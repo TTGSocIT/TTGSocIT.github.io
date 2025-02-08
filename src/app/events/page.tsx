@@ -21,53 +21,49 @@ import EventsSection from "./components/EventsSection";
 // --- REGULAR EVENTS ---
 // Our Weekly/Bi-Weekly Events We Run
 const regularEventsHashmap = [
-  {
-    title: "Weekly Boardgames",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+    {
+        title: "Weekly Boardgames",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+        
+        // image aspect ratio is 16:9
+        photoPath: "assets/events_pictures/regular/cropped_bgames.webp",
+        photoAlt: "People playing boardgames at our weekly boardgame events",
 
-    // image aspect ratio is 16:9
-    photoPath: "assets/events_pictures/regular/cropped_bgames.webp",
-    photoAlt: "People playing boardgames at our weekly boardgame events",
+        // All fields below this comment are optional. If you leave them blank they're skipped and don't render
+        timeStr: "Every Friday 6pm - 9pm",
+        locationStr: "Your Mom's Bedroom",
+        updatedLast: "3000 years ago",
 
-    // All fields below this comment are optional. If you leave them blank they're skipped and don't render
-    timeStr: "Every Friday 6pm - 9pm",
-    locationStr: "Your Mom's Bedroom",
-    updatedLast: "3000 years ago",
+        // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
+        optionalBottomJsx: (<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Button That Could Go somewhere or something idk
+        </button>)
+    },
+    {
+        title: "DND campaign",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+        
+        photoPath: "assets/events_pictures/regular/cropped_bgames.webp",
+        photoAlt: "People playing boardgames at our weekly boardgame events",
 
-    // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
-    optionalBottomJsx: (
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Button That Could Go somewhere or something idk
-      </button>
-    ),
-  },
-  {
-    title: "Test2",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+        timeStr: "TIME HERE",
+        locationStr: "LOCATION HERE", 
+    },
+    {
+        title: "TCG weekly events ",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+        
+        photoPath: "assets/events_pictures/regular/cropped_bgames.webp",
+        photoAlt: "People playing boardgames at our weekly boardgame events",
 
-    photoPath: "assets/events_pictures/regular/cropped_bgames.webp",
-    photoAlt: "People playing boardgames at our weekly boardgame events",
+        timeStr: "TIME HERE",
+        locationStr: "LOCATION HERE", 
+        updatedLast: ""
+    }
+]
 
-    timeStr: "TIME HERE",
-    locationStr: "LOCATION HERE",
-  },
-  {
-    title: "Test3",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
 
-    photoPath: "assets/events_pictures/regular/cropped_bgames.webp",
-    photoAlt: "People playing boardgames at our weekly boardgame events",
-
-    timeStr: "TIME HERE",
-    locationStr: "LOCATION HERE",
-    updatedLast: "",
-  },
-];
-
-// --- SPECIAL/IRREGULAR EVENTS ---
+// --- SPECIAL/IRREGULAR EVENTS --- 
 // Irregular events like animesoc colabs n stuff
 const specialEventsHashmap = [
   {
