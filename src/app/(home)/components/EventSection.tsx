@@ -61,7 +61,7 @@ const EventSection = () => {
         <SwiperSlide>
           <EventCard1
             name="Weekly Trading card games"
-            image="/YGO_cards.webp"
+            image="/Magic.webp"
           />
         </SwiperSlide>
         <SwiperSlide>
