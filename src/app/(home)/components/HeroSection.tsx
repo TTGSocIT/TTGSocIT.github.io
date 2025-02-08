@@ -25,7 +25,7 @@ const HeroSection = () => {
           UNSW Tabletop Games Society
         </div>
         <p className="text-white text-2xl md:text-4x1 text-center">
-          For everyone interested in Boardgames, RPGs & TCG at UNSW  s
+          For everyone interested in Boardgames, RPGs & TCG at UNSW
         </p>
 
         <div className="flex gap-x-2 text-white z-10">
