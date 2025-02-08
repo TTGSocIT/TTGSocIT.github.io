@@ -26,7 +26,7 @@ const ValueSection = () => {
             title="Consistency"
             description="We’ve been holding weekly gaming sessions since the dawn of time (or
             whenever the uni permits us), we will continue to do this until UNSW
-            kicks collapses. This consistency allows us to build up a community
+            collapses. This consistency allows us to build up a community
             over time, campaigns to thrive, and players to focus on having fun
             without worry. Even if you can only come once in a while there will
             be friendly faces ready for you whenever you are free to swing by."
