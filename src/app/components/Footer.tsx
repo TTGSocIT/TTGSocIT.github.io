@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="sticky w-full z-40 text-textColorBg bg-panelSecondaryColor shadow-md pt-[200px] pb-10 overflow-y-hidden">
+    <footer className="sticky w-full z-40 text-textColorBg bg-transparent shadow-md pt-[200px] pb-10 overflow-y-hidden">
       <div className="relative -z-10">
         <div className="absolute left-0 right-0 -top-10 h-[150px]">
           <div className="absolute w-full h-[500%] skew-y-[10deg] translate-y-2 bg-accentColor" />

@@ -15,7 +15,7 @@ const EventCard = () => {
           className="w-[300px] h-[180px] rounded-md"
         />
         <div
-          className="absolute bottom-0 left-0 h-10 bg-primary text-textColorBg
+          className="absolute bottom-0 left-0 h-10 bg-titleColor text-textColorBg
           w-full rounded-b-md flex items-center justify-center"
         >
           Place Holder

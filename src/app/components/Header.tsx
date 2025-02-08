@@ -35,7 +35,7 @@ const Header = () => {
   //const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <nav className="fixed w-full z-40 bg-foreground text-foreground shadow-md h-16">
+    <nav className="fixed w-full z-50 bg-foreground text-foreground shadow-md h-16">
       {/* Logo Button */}
       <div className="absolute left-4 top-0 bottom-0 flex items-center justify-center z-10">
         <Link
