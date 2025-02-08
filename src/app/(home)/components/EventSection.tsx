@@ -10,8 +10,13 @@ import EventCard1 from "@/app/(home)/components/EventCard1";
 
 const EventSection = () => {
   return (
-    <div className="bg-black py-20 flex flex-col items-center justify-center gap-y-12">
-      <div className="flex flex-col gap-y-3 text-center max-w-[1000px] px-5">
+    <div
+      className="relative py-20 flex flex-col items-center justify-center gap-y-12 bg-cover bg-center"
+      style={{ backgroundImage: `url('/hero.webp')` }}
+    >
+      <div className="absolute bg-black/70 w-full h-full"></div>
+
+      <div className="flex flex-col gap-y-3 text-center max-w-[1000px] px-5 z-20">
         <div className="font-bold text-3xl text-primary">
           Events at UNSW TTGSoc
         </div>
@@ -42,19 +47,25 @@ const EventSection = () => {
         }}
       >
         <SwiperSlide>
-          <EventCard />
+          <EventCard1
+            name="Weekly Boardgames"
+            image="/Friday_Boardgames.webp"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name="yo" image="/hero.webp" />
+          <EventCard1 name="RPG campaigns" image="/lost_lands_dnd.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard />
+          <EventCard1 name="Anime Collabs!!" image="/maid_cafe.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard />
+          <EventCard1
+            name="Weekly Trading card games"
+            image="/YGO_cards.webp"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard />
+          <EventCard1 name="Uniqe and new RPG's" image="/dnd thing.webp" />
         </SwiperSlide>
         <SwiperSlide>
           <EventCard />

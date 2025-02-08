@@ -1,6 +1,6 @@
 const ValueSection = () => {
   return (
-    <div className="text-white py-20 px-5 flex flex-col items-center">
+    <div className="text-black py-20 px-5 flex flex-col items-center">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-x-20 gap-y-5">
         <div className="flex-1 max-w-[500px] flex flex-col gap-y-3 order-1 lg:order-2">
           <div className="font-bold text-3xl text-primary">Values...</div>
