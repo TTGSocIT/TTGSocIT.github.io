@@ -10,7 +10,7 @@ import { redirect, RedirectType } from "next/navigation";
  */
 const HeroSection = () => {
   return (
-    <div className="min-h-screen w-full px-3 md:px-5 relative overflow-hidden flex items-center justify-center">
+    <div className="bg-transparent min-h-screen w-full px-3 md:px-5 relative overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-black bg-opacity-70" />
         <img
@@ -80,7 +80,7 @@ const HeroSection = () => {
       </div>
 
       {/* I think we should change this part to be different to the anime@uts website both in colours and shape design */}
-      <div className="absolute left-0 right-0 bottom-0 h-[10vh]">
+      <div className="absolute left-0 right-0 bottom-0 h-[10vh] bg-transparent">
         <div className="absolute w-full h-[500%] skew-y-[-10deg] bg-accentColor" />
         <div className="absolute w-full h-[500%] skew-y-[-6deg] bg-white" />
       </div>
