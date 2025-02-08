@@ -69,7 +69,7 @@ export default function EventsSection({
         }, 500);
       }
     }
-  }, []);
+  }, [query]);
 
   return (
     <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center justify-center">

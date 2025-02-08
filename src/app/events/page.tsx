@@ -5,6 +5,7 @@
  *
  */
 
+import { Suspense } from "react";
 import EventsSection from "./components/EventsSection";
 
 /** ---- EVENTS AS MAPS ---
@@ -102,32 +103,36 @@ const otherHashmap = [
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export default function Events() {
   return (
-    <div className="font-[family-name:var(--font-geist-sans)]">
-      <div className="flex flex-col mb-10 gap-10">
-        {regularEventsHashmap.length > 0 && (
-          <EventsSection
-            title="Regular Events"
-            titleImgPath={"/hero.webp"}
-            eventslistHashmap={regularEventsHashmap}
-          />
-        )}
-        {specialEventsHashmap.length > 0 && (
-          <EventsSection
-            title="Special Events"
-            titleImgPath={"/hero.webp"}
-            eventslistHashmap={specialEventsHashmap}
-            startIdx={regularEventsHashmap.length}
-          />
-        )}
-        {otherHashmap.length > 0 && (
-          <EventsSection
-            title="Other"
-            titleImgPath={"/hero.webp"}
-            eventslistHashmap={otherHashmap}
-            startIdx={regularEventsHashmap.length + specialEventsHashmap.length}
-          />
-        )}
+    <Suspense>
+      <div className="font-[family-name:var(--font-geist-sans)]">
+        <div className="flex flex-col mb-10 gap-10">
+          {regularEventsHashmap.length > 0 && (
+            <EventsSection
+              title="Regular Events"
+              titleImgPath={"/hero.webp"}
+              eventslistHashmap={regularEventsHashmap}
+            />
+          )}
+          {specialEventsHashmap.length > 0 && (
+            <EventsSection
+              title="Special Events"
+              titleImgPath={"/hero.webp"}
+              eventslistHashmap={specialEventsHashmap}
+              startIdx={regularEventsHashmap.length}
+            />
+          )}
+          {otherHashmap.length > 0 && (
+            <EventsSection
+              title="Other"
+              titleImgPath={"/hero.webp"}
+              eventslistHashmap={otherHashmap}
+              startIdx={
+                regularEventsHashmap.length + specialEventsHashmap.length
+              }
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
