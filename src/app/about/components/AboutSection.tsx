@@ -66,8 +66,10 @@ export default function AboutSection({ aboutListHashmap, startIdx }: Props) {
                 <img src={photoPath} alt={photoAlt} />
               </div>
 
-              <div className="w-full md:w-1/2 md:h-full text-center md:text-left">
-                <h1 className="font-bold text-4xl text-titleColor">{title}</h1>
+              <div className="w-full md:w-1/2 md:h-full text-left">
+                <h1 className="font-bold text-4xl text-titleColor text-center md:text-left">
+                  {title}
+                </h1>
                 {(timeStr || locationStr) && (
                   <div className="flex flex-row gap-10 justify-center md:justify-start italic">
                     {timeStr && (

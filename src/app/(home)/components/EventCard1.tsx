@@ -35,7 +35,7 @@ const EventCard1 = ({ name, image }: EventCardProps) => {
           className="w-[300px] h-[180px] rounded-md"
         />
         <div
-          className="absolute bottom-0 left-0 h-10 bg-primary text-white
+          className="absolute bottom-0 left-0 h-10 bg-titleColor text-white
             w-full rounded-b-md flex items-center justify-center"
         >
           {name}
