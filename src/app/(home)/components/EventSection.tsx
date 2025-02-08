@@ -12,7 +12,7 @@ const EventSection = () => {
   return (
     <div
       className="relative py-20 flex flex-col items-center justify-center gap-y-12 bg-cover bg-center"
-      style={{ backgroundImage: `url('/hero.webp')` }}
+      style={{ backgroundImage: `url('/home_events.webp')` }}
     >
       <div className="absolute bg-black/70 w-full h-full"></div>
 

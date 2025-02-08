@@ -10,7 +10,7 @@ const EventCard = () => {
         transition-all duration-300"
       >
         <img
-          src="/hero.webp"
+          src="/home_events.webp"
           alt="event"
           className="w-[300px] h-[180px] rounded-md"
         />

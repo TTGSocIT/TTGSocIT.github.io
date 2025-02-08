@@ -9,6 +9,7 @@ interface EventCardProps {
 }
 
 const EventCard1 = ({ name, image }: EventCardProps) => {
+
   const router = useRouter();
   const handleClick = useCallback(() => {
     const eventId = titleCaseToId(name);
