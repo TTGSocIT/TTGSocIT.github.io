@@ -11,7 +11,7 @@ export default function Home() {
       <WelcomeSection />
       <EventSection />
       <ValueSection />
-      
+      <TeamSection />
     </div>
   );
 }
