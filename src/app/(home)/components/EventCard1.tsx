@@ -12,8 +12,7 @@ const EventCard1 = ({ name, image }: EventCardProps) => {
           rotate-[7deg] group-hover:rotate-[5deg] transition-all duration-300"/>
         <div
           className="relative w-[300px] h-[210px] rotate-[-5deg] rounded-md group-hover:rotate-0
-          transition-all duration-300"
-        >
+          transition-all duration-300">
           <img
             src={image}
             alt={name}
