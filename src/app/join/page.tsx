@@ -99,28 +99,23 @@ const JoinPage = () => {
                 Benefits of joining UNSW TTGSoc
               </div>
               <p>
-                TTGSoc is open to all UNSW members (is this true or is it open
-                to EVERYONE), with a diverse community ranging from fresh
-                first-years to weathered postgrads - even our subcommittee! With
-                our friendly members and huge dDiscord server (with dedicated
-                RPG channels too!) TTGSoc is a safe, welcoming space for
-                everyone to connect over a shared love of tabletop games and all
-                things related.
+                 If you’re passionate about any of the branches of tabletop games we offer under our society such as board games, trading card games or TTRPGs, looking to develop teamwork and communication skills, or even just wanting to pad your resume with some extracurricular experiences, applying for a subcommittee, director or executive role would be perfect for you!
+                 Our 2025 subcommittee applications are OPEN NOW!!!
               </p>
 
               <button
                 className="button font-semibold max-w-[120px] justify-center"
                 onClick={() =>
-                  redirect("https://discord.gg/unswttgsoc", RedirectType.push)
+                  redirect("https://docs.google.com/forms/d/e/1FAIpQLSfHoafWCgH2Udboj7KE_A53HduvegDnU3PNevCwOdQHs1NYTQ/viewform?usp=sharing", RedirectType.push)
                 }
               >
                 <IoShareSocialSharp />
-                Join us
+                Join the team!
               </button>
             </div>
 
             <div className="flex-1 max-w-[500px] order-1 lg:order-2 my-auto">
-              <img src="/welcome.webp" alt="welcome" />
+              <img src="/stall.webp" alt="welcome" />
             </div>
           </div>
         </div>
