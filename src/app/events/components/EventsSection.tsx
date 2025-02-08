@@ -64,11 +64,11 @@ export default function EventsSection({title, titleImgPath, eventslistHashmap, s
                     <div className="w-full md:w-1/2 md:h-full text-center md:text-left">
                         <h1 className="font-bold text-4xl text-primary">{title}</h1>
                         {(timeStr || locationStr) && <div className="flex flex-row gap-10 justify-center md:justify-start italic">
-                            {timeStr && <h2 className="text-white">{timeStr}</h2>}
-                            {locationStr && <h2 className="text-white">{locationStr}</h2>}
+                            {timeStr && <h2 className="text-black">{timeStr}</h2>}
+                            {locationStr && <h2 className="text-black">{locationStr}</h2>}
                         </div>}
-                        { updatedLast && <h3 className="opacity-50 italic text-white">Last Updated: {updatedLast}</h3>}
-                        <p className="mt-3 text-white">{description}</p>
+                        { updatedLast && <h3 className="opacity-50 italic text-black">Last Updated: {updatedLast}</h3>}
+                        <p className="mt-3 text-black">{description}</p>
                         {optionalBottomJsx}
                     </div>
                 </div>
