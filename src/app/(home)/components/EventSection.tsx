@@ -1,8 +1,9 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 
 import EventCard from "@/app/(home)/components/EventCard";
 import EventCard1 from "@/app/(home)/components/EventCard1";
@@ -23,6 +24,8 @@ const EventSection = () => {
       </div>
 
       <Swiper
+        navigation={true}
+        modules={[Navigation]}
         spaceBetween={50}
         slidesPerView={5}
         loop
@@ -44,19 +47,25 @@ const EventSection = () => {
         }}
       >
         <SwiperSlide>
-          <EventCard1 name = "Weekly Boardgames" image = "/Friday_Boardgames.webp" />
+          <EventCard1
+            name="Weekly Boardgames"
+            image="/Friday_Boardgames.webp"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name = "RPG campaigns" image = "/lost_lands_dnd.webp" />
+          <EventCard1 name="RPG campaigns" image="/lost_lands_dnd.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name = "Anime Collabs!!" image = "/maid_cafe.webp" />
+          <EventCard1 name="Anime Collabs!!" image="/maid_cafe.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name = "Weekly Trading card games" image = "/YGO_cards.webp" />
+          <EventCard1
+            name="Weekly Trading card games"
+            image="/YGO_cards.webp"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name = "Uniqe and new RPG's" image = "/dnd thing.webp"/>
+          <EventCard1 name="Uniqe and new RPG's" image="/dnd thing.webp" />
         </SwiperSlide>
         <SwiperSlide>
           <EventCard />
