@@ -14,13 +14,13 @@ const EventSection = () => {
       className="relative py-20 flex flex-col items-center justify-center gap-y-12 bg-cover bg-center"
       style={{ backgroundImage: `url('/home_events.webp')` }}
     >
-      <div className="absolute bg-black/70 w-full h-full"></div>
+      <div className="absolute bg-black/70 dark:bg-black/40 w-full h-full"></div>
 
       <div className="flex flex-col gap-y-3 text-center max-w-[1000px] px-5 z-20">
         <div className="font-bold text-3xl text-titleColorBg">
           Events at UNSW TTGSoc
         </div>
-        <p className="text-white">(TODO UPDATE TEXT HERE)</p>
+        <p className="text-white"></p>
       </div>
 
       <Swiper
