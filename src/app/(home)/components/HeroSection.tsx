@@ -28,9 +28,9 @@ const HeroSection = () => {
           For everyone interested in Boardgames, RPGs & TCG at UNSW
         </p>
 
-        <div className="flex gap-x-2">
+        <div className="flex gap-x-2 text-white z-10">
           <button
-            className="bg-[#303F9F] flex align-center rounded-md text-center px-6 py-3 hover:brightness-125 transition-all duration-100"
+            className="bg-[#303F9F] flex align-center rounded-md text-center text-sm md:text-base px-4 md:px-6 py-3 hover:brightness-125 transition-all duration-100"
             onClick={() =>
               redirect(
                 "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT",
@@ -81,7 +81,7 @@ const HeroSection = () => {
 
       {/* I think we should change this part to be different to the anime@uts website both in colours and shape design */}
       <div className="absolute left-0 right-0 bottom-0 h-[10vh]">
-        <div className="absolute w-full h-[500%] skew-y-[-10deg] bg-[#303F9F]" />
+        <div className="absolute w-full h-[500%] skew-y-[-10deg] bg-accentColor" />
         <div className="absolute w-full h-[500%] skew-y-[-6deg] bg-white" />
       </div>
     </div>

@@ -4,7 +4,7 @@ const ValueSection = () => {
   return (
     <div className="text-black py-20 px-5 flex flex-col items-center">
       <div className="flex flex-col items-center justify-center gap-y-16">
-        <div className="font-bold text-4xl text-primary text-center">{`Our Society's Values`}</div>
+        <div className="font-bold text-4xl text-titleColor text-center">{`Our Society's Values`}</div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-16 gap-x-24">
           <ValueItem
             title="Welcome"
@@ -23,7 +23,7 @@ const ValueSection = () => {
             have any complaint that your voice will be heard."
           />
           <ValueItem
-            title="Inclusivity"
+            title="Consistency"
             description="We’ve been holding weekly gaming sessions since the dawn of time (or
             whenever the uni permits us), we will continue to do this until UNSW
             kicks collapses. This consistency allows us to build up a community
@@ -32,7 +32,7 @@ const ValueSection = () => {
             be friendly faces ready for you whenever you are free to swing by."
           />
           <ValueItem
-            title="Inclusivity"
+            title="Community"
             description="We value community and the forming of them, being a multi faceted
             society, enhancing the community and the comradery is vital for any
             society to survive"
