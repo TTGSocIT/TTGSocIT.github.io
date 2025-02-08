@@ -47,7 +47,7 @@ const Header = () => {
           href="/"
           passHref
         >
-          <img src="logo-blue.svg" alt="Our Logo" className="h-full w-full" />
+          <img src="logo-white.svg" alt="Our Logo" className="h-full w-full" />
         </Link>
       </div>
 
