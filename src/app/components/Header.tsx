@@ -1,8 +1,8 @@
 "use client";
+import { useState } from "react";
 import { redirect, RedirectType } from "next/navigation";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-//import { useState } from "react";
 
 const nav = [
   {
@@ -31,8 +31,12 @@ const nav = [
  * Website Header Bar
  */
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const param = usePathname();
-  //const [open, setOpen] = useState<boolean>(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav className="fixed w-full z-50 bg-foreground text-foreground shadow-md h-16">
@@ -47,7 +51,7 @@ const Header = () => {
         </Link>
       </div>
 
-      {/* Tabs */}
+      {/* Tabs (Desktop) */}
       <div className="hidden lg:flex gap-x-5 absolute inset-0 items-center justify-center">
         {nav.map(({ name, href }) => (
           <a href={href} className="relative group" key={name}>
@@ -59,10 +63,8 @@ const Header = () => {
               {name}
             </div>
             <span
-              className={`
-                transition-all duration-200 w-[0%] mx-auto opacity-100 h-[2px] block bg-primary group-hover:w-full
-                ${param === href ? "w-full" : ""}
-              `}
+              className={`transition-all duration-200 w-[0%] mx-auto opacity-100 h-[2px] block bg-primary group-hover:w-full
+                ${param === href ? "w-full" : ""}`}
             />
           </a>
         ))}
@@ -77,41 +79,53 @@ const Header = () => {
         >
           <img src="/discord.svg" alt="discord" className="h-4 w-auto" />
         </div>
+      </div>
 
-        <div className="relative flex items-center text-white cursor-pointer">
-          <div className="my-1 mx-2 font-bold text-lg text-white">Connect</div>
+      {/* Mobile Hamburger Icon*/}
+      <div className="lg:hidden flex items-center justify-between p-4">
+        <button onClick={toggleMenu} className="text-white ml-auto">
           <svg
-            stroke="currentColor"
-            fill="currentColor"
-            strokeWidth="0"
-            viewBox="0 0 512 512"
-            height="16"
-            width="16"
             xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-6 h-6"
           >
-            <path d="m98 190.06 139.78 163.12a24 24 0 0 0 36.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62z" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
           </svg>
-        </div>
+        </button>
       </div>
 
-      <div
-        className="absolute inset-0 left-16 flex items-center flex-row-reverse pr-4 lg:hidden
-        cursor-pointer text-white"
-      >
-        <svg
-          stroke="currentColor"
-          fill="currentColor"
-          strokeWidth="0"
-          viewBox="0 0 24 24"
-          className="transition-transform duration-150 rotate-0"
-          height="32"
-          width="32"
-          xmlns="http://www.w3.org/2000/svg"
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div
+          className={`lg:hidden absolute left-0 top-16 bg-foreground w-full p-4 space-y-4`}
         >
-          <path fill="none" d="M0 0h24v24H0z" />
-          <path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-        </svg>
-      </div>
+          {nav.map(({ name, href }) => (
+            <Link
+              key={name}
+              href={href}
+              className="text-neutral-500 block font-bold"
+              onClick={toggleMenu}
+            >
+              {name}
+            </Link>
+          ))}
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() =>
+              redirect("https://discord.gg/unswttgsoc", RedirectType.push)
+            }
+          >
+            <img src="/discord.svg" alt="discord" className="h-4 w-auto" />
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
