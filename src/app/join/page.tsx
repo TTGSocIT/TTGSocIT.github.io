@@ -107,7 +107,7 @@ const JoinPage = () => {
                 skills, or even just wanting to pad your resume with some
                 extracurricular experiences, applying for a subcommittee,
                 director or executive role would be perfect for you! Our 2025
-                subcommittee applications are OPEN NOW!!!
+                subcommittee applications are OPEN NOW! ! !
               </p>
 
               <button
