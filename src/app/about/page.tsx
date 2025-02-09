@@ -8,7 +8,7 @@ const aboutHashMap = [
   {
     title: "About UNSW TTGSoc",
     description:
-      "At TTGSoc you can join a thriving community and create meaningful relationships in a safe and casual space. In a university of over 60,000 students, tabletop games are a good starting point for getting to know others. Who knows where else your interests might take you? Many of our members have a shared love for countless other things like art, rhythm games, bouldering, and even Valorant… We’ve even had some longtime members with no interest in tabletop games join our weekly sessions and subcommittee just for the people and fun atmosphere!",
+      "At TTGSoc, you’ll find a thriving community where you can build meaningful connections in a welcoming and casual space. In a university of over 60,000 students, tabletop games offer a great way to meet new people—and who knows where your interests might take you? Many of our members share a love for art, rhythm games, bouldering, and even Valorant. We’ve even had longtime members with no prior interest in tabletop games join our weekly sessions and subcommittee just for the people and the fun atmosphere!",
 
     // image aspect ratio is 16:9
     photoPath: "assets/events_pictures/regular/cropped_bgames.webp",
@@ -17,7 +17,7 @@ const aboutHashMap = [
   {
     title: "Sponsorships",
     description:
-      "We are currently sponsored by Goodgames and Alliance Games, both gaming stores close to UNSW. As long as you have joined us as a TTGSoc member, you can receive 5-10% discounts on all of their products! If you are a sponsor and would like to reach out to us, please contact us at our email unswttgsoc@gmail.com. We provide flexible sponsorship options, with the capacity to promote content to over 1500 of current university students and new graduates over our extensive social media coverage.",
+      "We welcome all collaboration inquiries from university societies, businesses and individuals! Over the years, we’ve been a reliable and successful partner for events like Megalan, CRITS, and inter-university tournaments. Our community includes a wide audience of board game enthusiasts, seasoned TCG players, and experienced dungeon masters, making us a great fit for a variety of gaming-related events.If you're interested in partnering with us, feel free to reach out via email or any of our socials to explore what we can offer for your event.",
 
     photoPath: "assets/events_pictures/regular/Sponsorships.webp",
     photoAlt: "People playing boardgames at our weekly boardgame events",

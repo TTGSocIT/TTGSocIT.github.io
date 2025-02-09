@@ -22,9 +22,9 @@ import EventsSection from "./components/EventsSection";
 // Our Weekly/Bi-Weekly Events We Run
 const regularEventsHashmap = [
   {
-    title: "Weekly Boardgames",
+    title: "Weekly Board Games",
     description:
-      "TTGSoc offers a wide variety of board games suited to all skill levels. Whether you’re after a quick and casual game of Exploding Kittens or looking for something more complex like Root, we definitely have the board game for you, and enthusiastic players to boot. Come on down to our weekly Friday casual board games session to see what we have on offer, and even make some new friends!",
+      "TTGSoc has a huge selection of board games for players of all skill levels! Whether you're up for a quick and casual round of Exploding Kittens or a deep, strategic battle in Root, we've got something for you, and plenty of enthusiastic players to join in. Drop by our weekly Friday board game session to explore new games, challenge your friends, and meet like-minded people in a fun and welcoming environment. We’re looking forward to seeing you there!",
 
     // image aspect ratio is 16:9
     photoPath: "/Friday_Boardgames.webp",
@@ -32,20 +32,20 @@ const regularEventsHashmap = [
 
     // All fields below this comment are optional. If you leave them blank they're skipped and don't render
     timeStr: "Every Friday 4pm - 8pm",
-    locationStr: "Webster 250, 251",
+    locationStr: "Webster 251",
     updatedLast: "8th of February 2025",
 
     // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
-    optionalBottomJsx: (
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3">
-        Button That Could Go somewhere or something idk
-      </button>
-    ),
+   // optionalBottomJsx: (
+     // <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3">
+       // Button That Could Go somewhere or something idk
+     // </button>
+   // ),
   },
   {
     title: "DND campaign",
     description:
-      "Dungeons and Dragons is one of the most well known TTRPGs out there, with plenty of people wanting to play but not having the means to do so. We aim to make D&D accessible to newbies (or even players having a hard time finding people to play with) with our society campaign! Don’t know the rules? We have plenty of Dungeon Masters (DMs) and players to teach you! Don’t know how to make a character? We have the resources and people to make this part easy peasy. Your schedule too busy to commit properly? None of them are mandatory, which means that you can play as much as you like, whenever you like! Joined too late? No such thing in THIS campaign! You can join anytime you want, and you’ll still be able to play in a session without too much trouble. ",
+      "Dungeons & Dragons is one of the most well-known tabletop RPGs, but finding a group to play with isn’t always easy. That’s where we come in! Our society campaign is designed to make D&D accessible to everyone—whether you’re a complete newbie or an experienced player struggling to find a consistent group. No clue how to play? Our friendly Dungeon Masters (DMs) and experienced players are happy to teach you. Not sure how to create a character? We’ve got the resources and guidance to make it a breeze. Worried about commitment? Sessions are completely drop-in, so you can play whenever your schedule allows. Come roll some dice, tell epic stories, and embark on unforgettable adventures with us! ",
 
     photoPath: "/lost_lands_dnd.webp",
     photoAlt: "People playing a D&D session at our fortnightly campaign events",
@@ -57,9 +57,9 @@ const regularEventsHashmap = [
   {
     title: "TCG weekly events ",
     description:
-      "Are you a master duelist, Ppokémon trainer, planeswalker and/or digidestined? If you answered yes or no to any of these questions, there is a place for you among our TCG players. Participate in weekly tournaments, enjoy discounts and learn to play new card games with a community of welcoming players.",
+      "Are you a Master Duelist, Pokémon trainer, Planeswalker, or DigiDestined? If you answered yes,  or even no - there’s a place for you in our TCG community! Join us for weekly tournaments, exclusive member discounts, and the chance to learn new card games in a fun and welcoming environment. Whether you're a seasoned pro or just starting out, you'll find plenty of friendly players ready to trade, battle, and share their love for TCGs!",
 
-    photoPath: "YGO_cards.webp",
+    photoPath: "tcg1.webp",
     photoAlt: "A collection of Trading cards",
 
     timeStr: "Every Friday 4pm - 8pm",
@@ -72,15 +72,26 @@ const regularEventsHashmap = [
 // Irregular events like animesoc colabs n stuff
 const specialEventsHashmap = [
   {
-    title: "AnimeSoc Collab",
+    title: "Collabarations",
     description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+      "Promoting the joy of tabletop games to more people has always been a core value of our society. As such, many of our large-scale events are hosted in collaboration with other UNSW societies. In 2024, some of our most successful events are organised with AnimeUNSW, EduSoc, QuantSoc and more! These events usually add a fun twist to our strategy games, such as cosplay, food, and trivia.Check out photos from some of our past events on our socials!",
 
     // timeStr: "TIME HERE",
     //locationStr: "LOCATION HERE",
 
     photoPath: "/maid_cafe.webp",
-    photoAlt: "A photo of a collabaration with anime socicety ",
+    photoAlt: "A photo of a collabaration with a anime socicety ",
+  },
+  {
+    title: "TCG Compititions",
+    description:
+      "Not only is our society a platform for trading card gamers to collect, trade and play, we also run frequent TCG events that are catered to all players. From tournaments, to drafting, and to casual formats, our dedicated team of TCG enthusiasts creates fun and unique events for all to enjoy. Some of our most popular titles include Magic the Gathering, Yu-Gi-Oh, and Vanguard. However, no matter how niche your game of choice may be, you are more than likely to find like-minded individuals in our discord server.",
+
+    // timeStr: "TIME HERE",
+    //locationStr: "LOCATION HERE",
+
+    photoPath: "/comp.webp",
+    photoAlt: "A photo of yu-gi-oh cards ",
   },
 ];
 
