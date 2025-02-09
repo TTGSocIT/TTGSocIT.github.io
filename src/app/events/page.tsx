@@ -39,7 +39,6 @@ const regularEventsHashmap = [
     optionalBottomJsx: (
       <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3">
         Button That Could Go somewhere or something idk
-        
       </button>
     ),
   },
@@ -54,12 +53,11 @@ const regularEventsHashmap = [
     timeStr: "Fortnightly on Sundays 12-4pm",
     locationStr: "Goldstein G02, G03, G07",
     updatedLast: "8th of February 2025",
-
   },
   {
     title: "TCG weekly events ",
     description:
-      "Are you a master duelist, Ppokémon trainer, planeswalker and/or digidestined? If you answered yes \or no to any of these questions, there is a place for you among our TCG players. Participate in weekly tournaments, enjoy discounts and learn to play new card games with a community of welcoming players.",
+      "Are you a master duelist, Ppokémon trainer, planeswalker and/or digidestined? If you answered yes or no to any of these questions, there is a place for you among our TCG players. Participate in weekly tournaments, enjoy discounts and learn to play new card games with a community of welcoming players.",
 
     photoPath: "YGO_cards.webp",
     photoAlt: "A collection of Trading cards",
@@ -78,7 +76,7 @@ const specialEventsHashmap = [
     description:
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
 
-   // timeStr: "TIME HERE",
+    // timeStr: "TIME HERE",
     //locationStr: "LOCATION HERE",
 
     photoPath: "/maid_cafe.webp",
@@ -88,20 +86,20 @@ const specialEventsHashmap = [
 
 // --- OTHER ---
 // Other
-const otherHashmap = [
-  {
-    title: "Test2",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+// const otherHashmap = [
+//   {
+//     title: "Test2",
+//     description:
+//       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
 
-    timeStr: "TIME HERE",
-    locationStr: "LOCATION HERE",
-    updatedLast: "",
+//     timeStr: "TIME HERE",
+//     locationStr: "LOCATION HERE",
+//     updatedLast: "",
 
-    photoPath: "assets/events_pictures/regular/temp_event1.webp",
-    photoAlt: "A photo of EVENT 2",
-  },
-];
+//     photoPath: "assets/events_pictures/regular/temp_event1.webp",
+//     photoAlt: "A photo of EVENT 2",
+//   },
+// ];
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export default function Events() {
@@ -124,7 +122,7 @@ export default function Events() {
               startIdx={regularEventsHashmap.length}
             />
           )}
-          {otherHashmap.length > 0 && (
+          {/* {otherHashmap.length > 0 && (
             <EventsSection
               title="Other"
               titleImgPath={"/hero.webp"}
@@ -133,7 +131,7 @@ export default function Events() {
                 regularEventsHashmap.length + specialEventsHashmap.length
               }
             />
-          )}
+          )} */}
         </div>
       </div>
     </Suspense>

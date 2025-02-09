@@ -8,11 +8,13 @@ import { IoShareSocialSharp } from "react-icons/io5";
 const JoinPage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center pt-10">
-      <div className="bg-black flex flex-col items-center gap-y-14 py-20 w-full px-5">
+      <div className="bg-black flex flex-col items-center gap-y-14 pt-24 pb-20 w-full px-5">
         <h3 className="text-5xl font-semibold text-white">Become a member!</h3>
         <div className="flex flex-col items-center gap-y-5">
           <img src="/sparc.png" alt="Join Us" />
-          <p className="text-white text-wrap text-center">[TODO]</p>
+          <p className="text-white text-wrap text-center">
+            Join us on Arc, to become an offical member
+          </p>
           <button
             className="button font-semibold"
             onClick={() =>
@@ -95,18 +97,26 @@ const JoinPage = () => {
         <div className="py-20 px-5 flex flex-col items-center">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-x-20 gap-y-5">
             <div className="flex-1 max-w-[500px] flex flex-col gap-y-3 order-2 lg:order-1">
-              <div className="font-bold text-3xl text-titleColor">
+              <div className="font-bold text-4xl text-titleColor">
                 Benefits of joining UNSW TTGSoc
               </div>
               <p>
-                 If you’re passionate about any of the branches of tabletop games we offer under our society such as board games, trading card games or TTRPGs, looking to develop teamwork and communication skills, or even just wanting to pad your resume with some extracurricular experiences, applying for a subcommittee, director or executive role would be perfect for you!
-                 Our 2025 subcommittee applications are OPEN NOW!!!
+                If you’re passionate about any of the branches of tabletop games
+                we offer under our society such as board games, trading card
+                games or TTRPGs, looking to develop teamwork and communication
+                skills, or even just wanting to pad your resume with some
+                extracurricular experiences, applying for a subcommittee,
+                director or executive role would be perfect for you! Our 2025
+                subcommittee applications are OPEN NOW!!!
               </p>
 
               <button
-                className="button font-semibold max-w-[120px] justify-center"
+                className="button font-semibold justify-center"
                 onClick={() =>
-                  redirect("https://docs.google.com/forms/d/e/1FAIpQLSfHoafWCgH2Udboj7KE_A53HduvegDnU3PNevCwOdQHs1NYTQ/viewform?usp=sharing", RedirectType.push)
+                  redirect(
+                    "https://docs.google.com/forms/d/e/1FAIpQLSfHoafWCgH2Udboj7KE_A53HduvegDnU3PNevCwOdQHs1NYTQ/viewform?usp=sharing",
+                    RedirectType.push
+                  )
                 }
               >
                 <IoShareSocialSharp />

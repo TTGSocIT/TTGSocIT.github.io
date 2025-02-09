@@ -56,7 +56,7 @@ const Header = () => {
         {nav.map(({ name, href }) => (
           <a href={href} className="relative group" key={name}>
             <div
-              className={`my-1 mx-2 font-bold text-lg ${
+              className={`my-1 mx-2 font-bold text-xl ${
                 param === href ? "text-white" : "text-neutral-500"
               }`}
             >

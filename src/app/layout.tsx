@@ -22,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${crimsonPro.className} antialiased overflow-x-hidden`}>
+      <body
+        className={`${crimsonPro.className} antialiased overflow-x-hidden text-lg`}
+      >
         <Header />
         {children}
         <Footer />

@@ -12,7 +12,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-center gap-5">
+      <div className="flex flex-row items-center justify-center gap-5 pt-5">
         <a href="https://discord.gg/unswttgsoc">
           <Image
             width={24}
