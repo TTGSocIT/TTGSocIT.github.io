@@ -59,7 +59,7 @@ const EventSection = () => {
           <EventCard1 name="AnimeSoc Collab" image="/maid_cafe.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name="Weekly Trading card games" image="/Magic.webp" />
+          <EventCard1 name="Weekly Trading card games" image="/tcg1.webp" />
         </SwiperSlide>
         <SwiperSlide>
           <EventCard1 name="Uniqe and new RPG's" image="/dnd thing.webp" />

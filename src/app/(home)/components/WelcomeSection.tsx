@@ -11,14 +11,7 @@ const WelcomeSection = () => {
             Welcome to The UNSW Tabletop Games Society
           </div>
           <p>
-            TTGSoc is a safe, welcoming space for everyone to connect over a
-            shared love of tabletop games and all things related. We have a huge
-            and expanding community for boardgames, trading card games, and
-            role-playing games! Our diverse community ranges from first-year
-            freshmen to postgrad hustlers, who are all deeply involved in the
-            everyday running of our society. With our regular events, friendly
-            members, and active Discord server, you will easily be able to
-            connect with like-minded people about your favourite games and more!
+          TTGSoc is a safe and welcoming space where everyone can connect over a shared love of board games, role playing games and trading card games to players of all backgrounds and experience levels. With regular events, friendly faces, and an active Discord server, you’ll have plenty of opportunities to meet like-minded people, discover new games, and share your passion for tabletop adventures!
           </p>
           <button
             onClick={() =>
