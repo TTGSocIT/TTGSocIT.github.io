@@ -43,7 +43,7 @@ const regularEventsHashmap = [
    // ),
   },
   {
-    title: "DND campaign",
+    title: "DND Campaign",
     description:
       "Dungeons & Dragons is one of the most well-known tabletop RPGs, but finding a group to play with isn’t always easy. That’s where we come in! Our society campaign is designed to make D&D accessible to everyone—whether you’re a complete newbie or an experienced player struggling to find a consistent group. No clue how to play? Our friendly Dungeon Masters (DMs) and experienced players are happy to teach you. Not sure how to create a character? We’ve got the resources and guidance to make it a breeze. Worried about commitment? Sessions are completely drop-in, so you can play whenever your schedule allows. Come roll some dice, tell epic stories, and embark on unforgettable adventures with us! ",
 
@@ -55,7 +55,7 @@ const regularEventsHashmap = [
     updatedLast: "8th of February 2025",
   },
   {
-    title: "TCG weekly events ",
+    title: "TCG Weekly Events ",
     description:
       "Are you a Master Duelist, Pokémon trainer, Planeswalker, or DigiDestined? If you answered yes,  or even no - there’s a place for you in our TCG community! Join us for weekly tournaments, exclusive member discounts, and the chance to learn new card games in a fun and welcoming environment. Whether you're a seasoned pro or just starting out, you'll find plenty of friendly players ready to trade, battle, and share their love for TCGs!",
 
