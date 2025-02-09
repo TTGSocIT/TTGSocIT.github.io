@@ -10,17 +10,18 @@ const nav = [
     href: "/",
   },
   {
-    name: "About",
-    href: "/about",
-  },
-  {
     name: "Events",
     href: "/events",
+  },
+  {
+    name: "About",
+    href: "/about",
   },
   {
     name: "Join",
     href: "/join",
   },
+  
   // {
   //   name: "Contact",
   //   href: "/contact",
