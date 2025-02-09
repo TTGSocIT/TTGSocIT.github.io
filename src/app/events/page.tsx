@@ -32,7 +32,7 @@ const regularEventsHashmap = [
 
     // All fields below this comment are optional. If you leave them blank they're skipped and don't render
     timeStr: "Every Friday 4pm - 8pm",
-    locationStr: "Webster 251",
+    locationStr: "Webster 250,251",
     updatedLast: "8th of February 2025",
 
     // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
@@ -59,11 +59,11 @@ const regularEventsHashmap = [
     description:
       "Are you a Master Duelist, Pokémon trainer, Planeswalker, or DigiDestined? If you answered yes,  or even no - there’s a place for you in our TCG community! Join us for weekly tournaments, exclusive member discounts, and the chance to learn new card games in a fun and welcoming environment. Whether you're a seasoned pro or just starting out, you'll find plenty of friendly players ready to trade, battle, and share their love for TCGs!",
 
-    photoPath: "tcg1.webp",
+    photoPath: "tcg2.webp",
     photoAlt: "A collection of Trading cards",
 
     timeStr: "Every Friday 4pm - 8pm",
-    locationStr: "Webster 250, 251",
+    locationStr: "Webster 251",
     updatedLast: "8th of February 2025",
   },
 ];
@@ -72,7 +72,7 @@ const regularEventsHashmap = [
 // Irregular events like animesoc colabs n stuff
 const specialEventsHashmap = [
   {
-    title: "Collabarations",
+    title: "Collaborations",
     description:
       "Promoting the joy of tabletop games to more people has always been a core value of our society. As such, many of our large-scale events are hosted in collaboration with other UNSW societies. In 2024, some of our most successful events are organised with AnimeUNSW, EduSoc, QuantSoc and more! These events usually add a fun twist to our strategy games, such as cosplay, food, and trivia.Check out photos from some of our past events on our socials!",
 
@@ -83,7 +83,7 @@ const specialEventsHashmap = [
     photoAlt: "A photo of a collabaration with a anime socicety ",
   },
   {
-    title: "TCG Compititions",
+    title: "TCG Competitions",
     description:
       "Not only is our society a platform for trading card gamers to collect, trade and play, we also run frequent TCG events that are catered to all players. From tournaments, to drafting, and to casual formats, our dedicated team of TCG enthusiasts creates fun and unique events for all to enjoy. Some of our most popular titles include Magic the Gathering, Yu-Gi-Oh, and Vanguard. However, no matter how niche your game of choice may be, you are more than likely to find like-minded individuals in our discord server.",
 
