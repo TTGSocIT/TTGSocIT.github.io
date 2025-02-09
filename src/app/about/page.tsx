@@ -2,7 +2,7 @@
 
 import AboutSection from "./components/AboutSection";
 import ImageScrollTitle from "./components/ImageScrollTitle";
-import WhoWeAre from "./components/WhoWeAre";
+//import WhoWeAre from "./components/WhoWeAre";
 
 const aboutHashMap = [
   {
@@ -47,7 +47,7 @@ export default function About() {
         {aboutHashMap.length > 0 && (
           <AboutSection aboutListHashmap={aboutHashMap} />
         )}
-        <WhoWeAre />
+          
       </div>
     </div>
   );
