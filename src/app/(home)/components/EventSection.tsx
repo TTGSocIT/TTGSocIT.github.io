@@ -48,7 +48,7 @@ const EventSection = () => {
       >
         <SwiperSlide>
           <EventCard1
-            name="Weekly Boardgames"
+            name="Weekly Board Games"
             image="/Friday_Boardgames.webp"
           />
         </SwiperSlide>
@@ -56,10 +56,10 @@ const EventSection = () => {
           <EventCard1 name="RPG campaigns" image="/lost_lands_dnd.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name="AnimeSoc Collab" image="/maid_cafe.webp" />
+          <EventCard1 name="Collaborations" image="/maid_cafe.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name="Weekly Trading card games" image="/tcg2.webp" />
+          <EventCard1 name="TCG weekly events" image="/tcg2.webp" />
         </SwiperSlide>
         <SwiperSlide>
           <EventCard1 name="Uniqe and new RPG's" image="/dnd thing.webp" />
