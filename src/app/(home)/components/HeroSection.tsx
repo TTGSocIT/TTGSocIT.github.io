@@ -4,6 +4,9 @@ import { FaDiscord } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { redirect, RedirectType } from "next/navigation";
+import Image from "next/image";
+
+import heroImage from "../../../../public/hero.webp";
 
 /**
  * The Main Page of the Website root.
@@ -13,8 +16,8 @@ const HeroSection = () => {
     <div className="bg-transparent min-h-screen w-full px-3 md:px-5 relative overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-black bg-opacity-70" />
-        <img
-          src="/hero.webp"
+        <Image
+          src={heroImage}
           alt="hero"
           className="w-full h-full object-cover object-left"
         />
