@@ -3,6 +3,10 @@ import { useState } from "react";
 import { redirect, RedirectType } from "next/navigation";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
+
+import logoImage from "../../../public/logo-white.svg";
+import discordImage from "../../../public/discord.svg";
 
 const nav = [
   {
@@ -21,11 +25,6 @@ const nav = [
     name: "Join",
     href: "/join",
   },
-  
-  // {
-  //   name: "Contact",
-  //   href: "/contact",
-  // },
 ];
 
 /**
@@ -48,7 +47,7 @@ const Header = () => {
           href="/"
           passHref
         >
-          <img src="logo-white.svg" alt="Our Logo" className="h-full w-full" />
+          <Image src={logoImage} alt="Our Logo" className="h-full w-full" />
         </Link>
       </div>
 
@@ -78,7 +77,7 @@ const Header = () => {
             redirect("https://discord.gg/unswttgsoc", RedirectType.push)
           }
         >
-          <img src="/discord.svg" alt="discord" className="h-4 w-auto" />
+          <Image src={discordImage} alt="discord" className="h-4 w-auto" />
         </div>
       </div>
 
@@ -123,7 +122,7 @@ const Header = () => {
               redirect("https://discord.gg/unswttgsoc", RedirectType.push)
             }
           >
-            <img src="/discord.svg" alt="discord" className="h-4 w-auto" />
+            <Image src={discordImage} alt="discord" className="h-4 w-auto" />
           </div>
         </div>
       )}

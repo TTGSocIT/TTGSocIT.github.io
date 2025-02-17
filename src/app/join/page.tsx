@@ -5,13 +5,17 @@ import { FaDiscord, FaFacebook, FaInstagram } from "react-icons/fa";
 
 import { IoShareSocialSharp } from "react-icons/io5";
 
+import sparcImage from "../../../public/sparc.png";
+import stallImage from "../../../public/stall.webp";
+import Image from "next/image";
+
 const JoinPage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center pt-10">
       <div className="bg-black flex flex-col items-center gap-y-14 pt-24 pb-20 w-full px-5">
         <h3 className="text-5xl font-semibold text-white">Become a member!</h3>
         <div className="flex flex-col items-center gap-y-5">
-          <img src="/sparc.png" alt="Join Us" />
+          <Image src={sparcImage} alt="Join Us" />
           <p className="text-white text-wrap text-center">
             Join us on Arc, to become an offical member
           </p>
@@ -125,7 +129,7 @@ const JoinPage = () => {
             </div>
 
             <div className="flex-1 max-w-[500px] order-1 lg:order-2 my-auto">
-              <img src="/stall.webp" alt="welcome" />
+              <Image src={stallImage} alt="welcome" />
             </div>
           </div>
         </div>

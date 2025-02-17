@@ -1,6 +1,8 @@
 "use client";
 
 import { redirect, RedirectType } from "next/navigation";
+import originalFroggieImage from "../../../../public/original froggie.webp";
+import Image from "next/image";
 
 const WelcomeSection = () => {
   return (
@@ -11,7 +13,12 @@ const WelcomeSection = () => {
             Welcome to The UNSW Tabletop Games Society
           </div>
           <p>
-          TTGSoc is a safe and welcoming space where everyone can connect over a shared love of board games, role playing games and trading card games to players of all backgrounds and experience levels. With regular events, friendly faces, and an active Discord server, you’ll have plenty of opportunities to meet like-minded people, discover new games, and share your passion for tabletop adventures!
+            TTGSoc is a safe and welcoming space where everyone can connect over
+            a shared love of board games, role playing games and trading card
+            games to players of all backgrounds and experience levels. With
+            regular events, friendly faces, and an active Discord server, you’ll
+            have plenty of opportunities to meet like-minded people, discover
+            new games, and share your passion for tabletop adventures!
           </p>
           <button
             onClick={() =>
@@ -24,7 +31,7 @@ const WelcomeSection = () => {
         </div>
 
         <div className="flex-1 max-w-[500px] order-1 lg:order-2">
-          <img src="/original froggie.webp" alt="welcome" />
+          <Image src={originalFroggieImage} alt="welcome" />
         </div>
       </div>
     </div>

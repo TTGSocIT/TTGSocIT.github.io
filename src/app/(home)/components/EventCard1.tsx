@@ -2,6 +2,7 @@ import { titleCaseToId } from "@/app/utils/titleCaseToId";
 import { useCallback } from "react";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface EventCardProps {
   name: string;
@@ -9,7 +10,6 @@ interface EventCardProps {
 }
 
 const EventCard1 = ({ name, image }: EventCardProps) => {
-
   const router = useRouter();
   const handleClick = useCallback(() => {
     const eventId = titleCaseToId(name);
@@ -29,10 +29,13 @@ const EventCard1 = ({ name, image }: EventCardProps) => {
         className="relative w-[300px] h-[210px] rotate-[-5deg] rounded-md group-hover:rotate-0
           transition-all duration-300"
       >
-        <img
+        <Image
           src={image}
           alt={name}
+          // need tailwind width and height to stretch the image..
           className="w-[300px] h-[180px] rounded-md"
+          width={300}
+          height={180}
         />
         <div
           className="absolute bottom-0 left-0 h-10 bg-titleColor text-white
