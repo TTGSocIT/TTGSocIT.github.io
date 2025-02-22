@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import EventCard from "@/app/(home)/components/EventCard";
-import EventCard1 from "@/app/(home)/components/EventCard1";
 
 const EventSection = () => {
   return (
@@ -47,25 +46,25 @@ const EventSection = () => {
         }}
       >
         <SwiperSlide>
-          <EventCard1
+          <EventCard
             name="Weekly Board Games"
             image="/Friday_Boardgames.webp"
           />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name="RPG campaigns" image="/lost_lands_dnd.webp" />
+          <EventCard name="RPG campaigns" image="/lost_lands_dnd.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name="Collaborations" image="/maid_cafe.webp" />
+          <EventCard name="Collaborations" image="/maid_cafe.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name="TCG weekly events" image="/tcg2.webp" />
+          <EventCard name="TCG weekly events" image="/tcg2.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard1 name="Unique and new RPGs" image="/dnd thing.webp" />
+          <EventCard name="Unique and new RPGs" image="/dnd thing.webp" />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard />
+          <EventCard name="TCG Competitions" image="/comp.webp" />
         </SwiperSlide>
       </Swiper>
     </div>
