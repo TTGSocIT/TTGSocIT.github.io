@@ -52,7 +52,7 @@ const EventSection = () => {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <EventCard name="RPG campaignss" image="/lost_lands_dnd.webp" />
+          <EventCard name="RPG campaigns" image="/lost_lands_dnd.webp" />
         </SwiperSlide>
         <SwiperSlide>
           <EventCard name="Collaborations" image="/maid_cafe.webp" />
