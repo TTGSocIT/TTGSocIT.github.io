@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import logoImage from "../../../public/logo-white.svg";
 import discordImage from "../../../public/discord.svg";
+import { EXTERNAL_LINKS } from "../constants";
 
 const nav = [
   {
@@ -74,7 +75,7 @@ const Header = () => {
         <div
           className="relative flex items-center cursor-pointer"
           onClick={() =>
-            redirect("https://discord.gg/unswttgsoc", RedirectType.push)
+            redirect(EXTERNAL_LINKS["discord"], RedirectType.push)
           }
         >
           <Image src={discordImage} alt="discord" className="h-4 w-auto" />
@@ -119,7 +120,7 @@ const Header = () => {
           <div
             className="flex items-center cursor-pointer"
             onClick={() =>
-              redirect("https://discord.gg/unswttgsoc", RedirectType.push)
+              redirect(EXTERNAL_LINKS["discord"], RedirectType.push)
             }
           >
             <Image src={discordImage} alt="discord" className="h-4 w-auto" />
