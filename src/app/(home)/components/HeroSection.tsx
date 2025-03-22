@@ -7,6 +7,7 @@ import { redirect, RedirectType } from "next/navigation";
 import Image from "next/image";
 
 import heroImage from "../../../../public/hero.webp";
+import { EXTERNAL_LINKS } from "@/app/constants";
 
 /**
  * The Main Page of the Website root.
@@ -36,7 +37,7 @@ const HeroSection = () => {
             className="bg-[#303F9F] flex align-center rounded-md text-center text-sm md:text-base px-4 md:px-6 py-3 hover:brightness-125 transition-all duration-100"
             onClick={() =>
               redirect(
-                "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT",
+                EXTERNAL_LINKS["arc"],
                 RedirectType.push
               )
             }
@@ -48,7 +49,7 @@ const HeroSection = () => {
             className="bg-[#7289DA] flex justify-center items-center p-1 md:p-2 rounded-md
             hover:brightness-125 transition-all duration-100 size-12"
             onClick={() =>
-              redirect("https://discord.gg/unswttgsoc", RedirectType.push)
+              redirect(EXTERNAL_LINKS["discord"], RedirectType.push)
             }
           >
             <FaDiscord className="text-2xl" />
@@ -59,7 +60,7 @@ const HeroSection = () => {
             hover:brightness-125 transition-all duration-100 size-12"
             onClick={() =>
               redirect(
-                "https://www.facebook.com/unswttgsoc/",
+                EXTERNAL_LINKS["facebook"],
                 RedirectType.push
               )
             }
@@ -72,7 +73,7 @@ const HeroSection = () => {
             hover:brightness-125 transition-all duration-100 size-12"
             onClick={() =>
               redirect(
-                "https://www.instagram.com/unswttgsoc/",
+                EXTERNAL_LINKS["instagram"],
                 RedirectType.push
               )
             }

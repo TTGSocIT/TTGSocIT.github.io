@@ -8,6 +8,7 @@ import { IoShareSocialSharp } from "react-icons/io5";
 import sparcImage from "../../../public/sparc.png";
 import stallImage from "../../../public/stall.webp";
 import Image from "next/image";
+import { EXTERNAL_LINKS } from "../constants";
 
 const JoinPage = () => {
   return (
@@ -23,7 +24,7 @@ const JoinPage = () => {
             className="button font-semibold"
             onClick={() =>
               redirect(
-                "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT",
+                EXTERNAL_LINKS["arc"],
                 RedirectType.push
               )
             }
@@ -65,7 +66,7 @@ const JoinPage = () => {
               className="button font-semibold max-w-[120px] justify-center"
               onClick={() =>
                 redirect(
-                  "https://www.facebook.com/unswttgsoc/",
+                  EXTERNAL_LINKS["facebook"],
                   RedirectType.push
                 )
               }
@@ -85,7 +86,7 @@ const JoinPage = () => {
               className="button font-semibold max-w-[120px] justify-center"
               onClick={() =>
                 redirect(
-                  "https://www.instagram.com/unswttgsoc/",
+                  EXTERNAL_LINKS["instagram"],
                   RedirectType.push
                 )
               }

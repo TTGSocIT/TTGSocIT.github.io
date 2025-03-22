@@ -3,6 +3,7 @@
 import { redirect, RedirectType } from "next/navigation";
 import originalFroggieImage from "../../../../public/original froggie.webp";
 import Image from "next/image";
+import { EXTERNAL_LINKS } from "@/app/constants";
 
 const WelcomeSection = () => {
   return (
@@ -22,7 +23,7 @@ const WelcomeSection = () => {
           </p>
           <button
             onClick={() =>
-              redirect("https://discord.gg/unswttgsoc", RedirectType.push)
+              redirect(EXTERNAL_LINKS["discord"], RedirectType.push)
             }
             className="button max-w-[120px] items-center justify-center"
           >

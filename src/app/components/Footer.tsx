@@ -1,6 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
+import { EXTERNAL_LINKS } from "../constants";
 const Footer = () => {
   return (
     <footer className="sticky w-full z-40 text-textColorBg bg-transparent shadow-md pt-[200px] pb-10 overflow-y-hidden">
@@ -13,7 +14,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-row items-center justify-center gap-5 pt-5">
-        <a href="https://discord.gg/unswttgsoc">
+        <a href={EXTERNAL_LINKS["discord"]}>
           <Image
             width={24}
             height={24}
@@ -22,7 +23,7 @@ const Footer = () => {
           ></Image>
         </a>
 
-        <a href="https://www.instagram.com/unswttgsoc/">
+        <a href={EXTERNAL_LINKS["instagram"]}>
           <Image
             width={24}
             height={24}
@@ -30,7 +31,7 @@ const Footer = () => {
             alt="Instagram contact logo"
           ></Image>
         </a>
-        <a href="https://www.facebook.com/unswttgsoc">
+        <a href={EXTERNAL_LINKS["facebook"]}>
           <Image
             width={24}
             height={24}
@@ -39,7 +40,7 @@ const Footer = () => {
           ></Image>
         </a>
 
-        <a href="https://linktr.ee/unswttgsoc">
+        <a href={EXTERNAL_LINKS["linktree"]}>
           <Image
             width={24}
             height={24}
@@ -48,7 +49,7 @@ const Footer = () => {
           ></Image>
         </a>
 
-        <a href="mailto:unswttgsoc@gmail.com">
+        <a href={`mailto:${EXTERNAL_LINKS["email"]}`}>
           <Image
             width={24}
             height={24}
