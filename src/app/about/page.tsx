@@ -17,7 +17,8 @@ const aboutHashMap = [
   {
     title: "Sponsorships",
     description:
-      "We welcome all collaboration inquiries from university societies, businesses and individuals! Over the years, we’ve been a reliable and successful partner for events like Megalan, CRITS, and inter-university tournaments. Our community includes a wide audience of board game enthusiasts, seasoned TCG players, and experienced dungeon masters, making us a great fit for a variety of gaming-related events. If you're interested in partnering with us, feel free to reach out via email or any of our socials to explore what we can offer for your event.",
+      "We welcome all collaboration inquiries from university societies, businesses and individuals! Over the years, we’ve been a reliable and successful partner for events like MegaLAN, CRITS, and inter-university tournaments. Our community includes a wide audience of board game enthusiasts, seasoned TCG players, and experienced dungeon masters, making us a great fit for a variety of gaming-related events.If you're interested in partnering with us, feel free to reach out via email or any of our socials to explore what we can offer for your event.",
+
 
     photoPath: "/Sponsorships_new.webp",
     photoAlt: "People playing boardgames at our weekly boardgame events",
@@ -28,7 +29,7 @@ const aboutHashMap = [
   {
     title: "Collaboration Prospects",
     description:
-      "We are very welcoming to any collaboration inquiries from university societies, businesses or individuals! Over the past few years, we have been a consistent and successful partner for events such as Megalan, CRITS, and inter-university events. We have a large audience of boardgame enjoyers, longtime TCG players, and experienced dungeon masters. Please contact us via email, or through any of our socials to learn more about what we can offer for your event.",
+      "We are very welcoming to any collaboration inquiries from university societies, businesses or individuals! Over the past few years, we have been a consistent and successful partner for events such as MegaLAN, CRITS, and inter-university events. We have a large audience of boardgame enjoyers, longtime TCG players, and experienced dungeon masters.Please contact us via email, or through any of our socials to learn more about what we can offer for your event.?",
 
     photoPath: "assets/events_pictures/regular/Aerospace Collab.webp",
     photoAlt: "People playing boardgames at our weekly boardgame events",
@@ -47,7 +48,6 @@ export default function About() {
         {aboutHashMap.length > 0 && (
           <AboutSection aboutListHashmap={aboutHashMap} />
         )}
-          
       </div>
     </div>
   );
