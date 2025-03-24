@@ -74,7 +74,7 @@ const specialEventsHashmap = [
   {
     title: "Collaborations",
     description:
-      "Promoting the joy of tabletop games to more people has always been a core value of our society. As such, many of our large-scale events are hosted in collaboration with other UNSW societies. In 2024, some of our most successful events are organised with AnimeUNSW, EduSoc, QuantSoc and more! These events usually add a fun twist to our strategy games, such as cosplay, food, and trivia.Check out photos from some of our past events on our socials!",
+      "Promoting the joy of tabletop games to more people has always been a core value of our society. As such, many of our large-scale events are hosted in collaboration with other UNSW societies. In 2024, some of our most successful events are organised with AnimeUNSW, EduSoc, QuantSoc and more! These events usually add a fun twist to our strategy games, such as cosplay, food, and trivia. Check out photos from some of our past events on our socials!",
 
     // timeStr: "TIME HERE",
     //locationStr: "LOCATION HERE",
