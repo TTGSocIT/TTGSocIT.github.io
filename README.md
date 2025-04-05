@@ -17,7 +17,7 @@ If you do want it though and you're on Windows, I reccomend [this one for Window
 ## Getting Started
 Before doing anything, install all the bot's dependencies by running the install command:
 ```bash
-npm run install
+npm install
 # or
 yarn install
 # or
