@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ### Installing JavaScript
 *You'll need to have JavaScript installed (version 20+ I think?), as well as a package manager for JS like `NPM` or `Yarn`.*
 
-I reccomend just installing [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+I'd reccomend just installing [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
 #### Note on NVM
 Above talks about having nvm installed. This is more optional, and for if you have nultiple version of JS for other projects.
