@@ -1,9 +1,33 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+### Production URL
+[`https://ttgsoc.vercel.app/`](https://ttgsoc.vercel.app/)
+
+### Installing JavaScript
+*You'll need to have JavaScript installed (version 20+ I think?), as well as a package manager for JS like `NPM` or `Yarn`.*
+
+I reccomend just installing [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+#### Note on NVM
+Above talks about having nvm installed. This is more optional, and for if you have nultiple version of JS for other projects.
+
+If you do want it though and you're on Windows, I reccomend [this one for Windows.](https://github.com/coreybutler/nvm-windows)
+
+
 ## Getting Started
+Before doing anything, install all the bot's dependencies by running the install command:
+```bash
+npm run install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
 
-First, run the development server:
 
+To run the development server:
 ```bash
 npm run dev
 # or
@@ -20,9 +44,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Deployment and Building
+To deploy the bot, first make sure it builds correctly by running:
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+# or
+bun build
+```
 
-https://ttgsoc.vercel.app/
+Then, make a merge request into the master branch `v1.0.0`.
+
+To have the changes deployed to PROD, contact someone who has access to the **Vercel Account** *(Head of IT)*.
+
+## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
