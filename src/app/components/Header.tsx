@@ -23,6 +23,10 @@ const nav = [
     href: "/about",
   },
   {
+    name: "Sponsorships",
+    href: "/sponsorship"
+  },
+  {
     name: "Join",
     href: "/join",
   },
