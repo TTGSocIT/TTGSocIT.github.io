@@ -6,24 +6,19 @@
  */
 
 type Props = {
-  aboutListHashmap: AboutMap[];
+  aboutListHashmap: SponsorshipMap[];
+  minorSponsorshipHashmap: SponsorshipMap[];
   startIdx?: number;
 };
 
-type AboutMap = {
+type SponsorshipMap = {
   title: string;
   description: string;
-
-  timeStr?: string;
-  locationStr?: string;
-  updatedLast?: string;
-  optionalBottomJsx?: React.ReactElement; // IDK the type here for JSX ima do any
-
   photoPath: string;
   photoAlt: string;
 };
 
-export default function AboutSection({ aboutListHashmap, startIdx }: Props) {
+export default function SponsorshipSection({ aboutListHashmap, startIdx }: Props) {
   /**
    * Object that Creates an About Section
    *
@@ -44,12 +39,8 @@ export default function AboutSection({ aboutListHashmap, startIdx }: Props) {
             {
               title,
               description,
-              timeStr,
-              locationStr,
-              updatedLast,
               photoPath,
               photoAlt,
-              optionalBottomJsx,
             },
             idx
           ) => (
@@ -70,23 +61,7 @@ export default function AboutSection({ aboutListHashmap, startIdx }: Props) {
                 <h1 className="font-bold text-4xl text-titleColor text-center md:text-left">
                   {title}
                 </h1>
-                {(timeStr || locationStr) && (
-                  <div className="flex flex-row gap-10 justify-center md:justify-start italic">
-                    {timeStr && (
-                      <h2 className="text-subTitleColor">{timeStr}</h2>
-                    )}
-                    {locationStr && (
-                      <h2 className="text-subTitleColor">{locationStr}</h2>
-                    )}
-                  </div>
-                )}
-                {updatedLast && (
-                  <h3 className="opacity-50 italic text-black">
-                    Last Updated: {updatedLast}
-                  </h3>
-                )}
                 <p className="mt-3 text-black">{description}</p>
-                {optionalBottomJsx}
               </div>
             </div>
           )

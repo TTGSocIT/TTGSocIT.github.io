@@ -1,14 +1,14 @@
 "use client";
 
-import AboutSection from "./components/AboutSection";
+import SponsorshipSection from "./components/SponsorshipSection";
 import ImageScrollTitle from "./components/ImageScrollTitle";
 //import WhoWeAre from "./components/WhoWeAre";
 
-const aboutHashMap = [
+const majorSponsoMap = [
   {
     title: "Domino's",
     description:
-      "Blah blah blah",
+      "(Insert text)",
 
     // image aspect ratio is 16:9
     photoPath: "assets/sponsorships-logos/dominos-logo.png",
@@ -40,14 +40,35 @@ const aboutHashMap = [
   },
 ];
 
+const minorSponsorshipsMap = [
+  {
+    title: "Alliance Games",
+    description: "(Insert text)",
+    photoPath: "assets/sponsorships-logo/alliance-games-logo.jpg",
+    photoAlt: "Alliance Games Logo",
+    timeStr: "",
+    locationStr: "",
+    updatedLast: "",
+  }
+]
+
 export default function About() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
       <div className="flex flex-col mb-10 gap-10">
+
+        {/* Major Sponsorships banner + content */}
         <ImageScrollTitle title="Major Sponsorships" imgPath="/hero.webp" />
         {aboutHashMap.length > 0 && (
-          <AboutSection aboutListHashmap={aboutHashMap} />
+          <SponsorshipSection aboutListHashmap={aboutHashMap} />
         )}
+
+        {/* Minor Sponsorships banner + content */}
+        <ImageScrollTitle title="Minor Sponsorships" imgPath="/hero.webp" />
+        {minorSponsorshipsMap.length > 0 && (
+          <SponsorshipSection minorSponsorshipHashmap={minorSponsorshipsMap} />
+        )}
+
       </div>
     </div>
   );
