@@ -1,7 +1,7 @@
 "use client";
 
+import { Suspense } from "react";
 import SponsorshipSection from "./components/SponsorshipSection";
-import ImageScrollTitle from "./components/ImageScrollTitle";
 //import WhoWeAre from "./components/WhoWeAre";
 
 const majorSponsorshipMap = [
@@ -18,29 +18,33 @@ const minorSponsorshipsMap = [
   {
     title: "Alliance Games",
     description: "(Insert text)",
-    photoPath: "assets/sponsorships-logo/alliance-games-logo.jpg",
+    photoPath: "assets/sponsorships-logos/alliance-games-logo.jpg",
     photoAlt: "Alliance Games Logo",
   }
 ];
 
-export default function About() {
+export default function Sponsorship() {
   return (
-    <div className="font-[family-name:var(--font-geist-sans)]">
-      <div className="flex flex-col mb-10 gap-10">
-
-        {/* Major Sponsorships banner + content */}
-        <ImageScrollTitle title="Major Sponsorships" imgPath="/hero.webp" />
-        {majorSponsorshipMap.length > 0 && (
-          <SponsorshipSection majorSponsorshipHashmap={majorSponsorshipMap} minorSponsorshipHashmap={[]} />
-        )}
-
-        {/* Minor Sponsorships banner + content */}
-        <ImageScrollTitle title="Minor Sponsorships" imgPath="/hero.webp" />
-        {minorSponsorshipsMap.length > 0 && (
-          <SponsorshipSection minorSponsorshipHashmap={minorSponsorshipsMap} majorSponsorshipHashmap={[]} />
-        )}
-
+    <Suspense>
+      <div className="font-[family-name:var(--font-geist-sans)]">
+        <div className="flex flex-col mb-10 gap-10">
+          {majorSponsorshipMap.length > 0 && (
+            <SponsorshipSection
+              title="Major Sponsorships"
+              titleImgPath={"/hero.webp"}
+              sponsorshipslistHashmap={majorSponsorshipMap}
+            />
+          )}
+          {minorSponsorshipsMap.length > 0 && (
+            <SponsorshipSection
+              title="Minor Sponsorships"
+              titleImgPath={"/hero.webp"}
+              sponsorshipslistHashmap={minorSponsorshipsMap}
+              startIdx={majorSponsorshipMap.length}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
