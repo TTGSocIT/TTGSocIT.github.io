@@ -32,8 +32,8 @@ const regularEventsHashmap = [
 
     // All fields below this comment are optional. If you leave them blank they're skipped and don't render
     timeStr: "Every Friday 4pm - 9pm",
-    locationStr: "Matthews 310 (and 301, 306, 308, 309 from 5pm)",
-    updatedLast: "7th of June 2025",
+    locationStr: "Electrical Engineering G03, G04",
+    updatedLast: "24th of Janurary 2026",
 
     // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
    // optionalBottomJsx: (
