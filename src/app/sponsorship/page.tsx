@@ -1,132 +1,54 @@
-/**
- * /events page
- *
- * Lists all the events we host under different sections.
- *
- */
+"use client";
 
-import { Suspense } from "react";
-import EventsSection from "./components/EventsSection";
+import AboutSection from "./components/AboutSection";
+import ImageScrollTitle from "./components/ImageScrollTitle";
+//import WhoWeAre from "./components/WhoWeAre";
 
-/** ---- EVENTS AS MAPS ---
- * Defines the events as a hashmap to input into the specific EventsSection abstract to fill out the info.
- *
- * Check EventsSection.tsx for specific hashmap type
- *
- * NOTE: What could be good is to add an extra field contianing JSX, in case people want to put custom HTML at the bottom of the description
- *  (ie. like if I wanted to add in a button or something to route somewhere)
- *
- */
-
-// --- REGULAR EVENTS ---
-// Our Weekly/Bi-Weekly Events We Run
-const regularEventsHashmap = [
+const aboutHashMap = [
   {
-    title: "Weekly Board Games",
+    title: "Domino's",
     description:
-      "TTGSoc has a huge selection of board games for players of all skill levels! Whether you're up for a quick and casual round of Exploding Kittens or a deep, strategic battle in Root, we've got something for you, and plenty of enthusiastic players to join in. Drop by our weekly Friday board game session to explore new games, challenge your friends, and meet like-minded people in a fun and welcoming environment. We’re looking forward to seeing you there!",
+      "Blah blah blah",
 
     // image aspect ratio is 16:9
-    photoPath: "/Friday_Boardgames.webp",
+    photoPath: "assets/sponsorships-logos/dominos-logo.png",
+    photoAlt: "Domino's logo",
+  },
+  {
+    title: "Major Sponsorships",
+    description:
+      "We welcome all collaboration inquiries from university societies, businesses and individuals! Over the years, we’ve been a reliable and successful partner for events like MegaLAN, CRITS, and inter-university tournaments. Our community includes a wide audience of board game enthusiasts, seasoned TCG players, and experienced dungeon masters, making us a great fit for a variety of gaming-related events.If you're interested in partnering with us, feel free to reach out via email or any of our socials to explore what we can offer for your event.",
+
+
+    photoPath: "/Sponsorships_new.webp",
     photoAlt: "People playing boardgames at our weekly boardgame events",
 
-    // All fields below this comment are optional. If you leave them blank they're skipped and don't render
-    timeStr: "Every Friday 4pm - 9pm",
-    locationStr: "Matthews 310 (and 301, 306, 308, 309 from 5pm)",
-    updatedLast: "7th of June 2025",
-
-    // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
-   // optionalBottomJsx: (
-     // <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3">
-       // Button That Could Go somewhere or something idk
-     // </button>
-   // ),
+    timeStr: "",
+    locationStr: "",
   },
   {
-    title: "DND Campaign",
+    title: "Collaboration Prospects",
     description:
-      "Dungeons & Dragons is one of the most well-known tabletop RPGs, but finding a group to play with isn’t always easy. That’s where we come in! Our society campaign is designed to make D&D accessible to everyone—whether you’re a complete newbie or an experienced player struggling to find a consistent group. No clue how to play? Our friendly Dungeon Masters (DMs) and experienced players are happy to teach you. Not sure how to create a character? We’ve got the resources and guidance to make it a breeze. Worried about commitment? Sessions are completely drop-in, so you can play whenever your schedule allows. Come roll some dice, tell epic stories, and embark on unforgettable adventures with us! ",
+      "We are very welcoming to any collaboration inquiries from university societies, businesses or individuals! Over the past few years, we have been a consistent and successful partner for events such as MegaLAN, CRITS, and inter-university events. We have a large audience of boardgame enjoyers, longtime TCG players, and experienced dungeon masters.Please contact us via email, or through any of our socials to learn more about what we can offer for your event.?",
 
-    photoPath: "/lost_lands_dnd.webp",
-    photoAlt: "People playing a D&D session at our fortnightly campaign events",
+    photoPath: "assets/events_pictures/regular/Aerospace Collab.webp",
+    photoAlt: "People playing boardgames at our weekly boardgame events",
 
-    timeStr: "Fortnightly on Sundays 12-4pm",
-    locationStr: "Quadrangle 1042, 1045 - 1048",
-    updatedLast: "7th of June 2025",
-  },
-  {
-    title: "TCG Weekly Events ",
-    description:
-      "Are you a Master Duelist, Pokémon trainer, Planeswalker, or DigiDestined? If you answered yes,  or even no - there’s a place for you in our TCG community! Join us for weekly tournaments, exclusive member discounts, and the chance to learn new card games in a fun and welcoming environment. Whether you're a seasoned pro or just starting out, you'll find plenty of friendly players ready to trade, battle, and share their love for TCGs!",
-
-    photoPath: "tcg2.webp",
-    photoAlt: "A collection of Trading cards",
-
-    timeStr: "Every Friday 4pm - 9pm",
-    locationStr: "Matthews 310",
-    updatedLast: "8th of February 2025",
+    timeStr: "",
+    locationStr: "",
+    updatedLast: "",
   },
 ];
 
-// --- SPECIAL/IRREGULAR EVENTS ---
-// Irregular events like animesoc colabs n stuff
-const specialEventsHashmap = [
-  {
-    title: "Collaborations",
-    description:
-      "Promoting the joy of tabletop games to more people has always been a core value of our society. As such, many of our large-scale events are hosted in collaboration with other UNSW societies. In 2024, some of our most successful events are organised with AnimeUNSW, EduSoc, QuantSoc and more! These events usually add a fun twist to our strategy games, such as cosplay, food, and trivia. Check out photos from some of our past events on our socials!",
-
-    // timeStr: "TIME HERE",
-    //locationStr: "LOCATION HERE",
-
-    photoPath: "/maid_cafe.webp",
-    photoAlt: "A photo of a collabaration with a anime socicety ",
-  },
-  {
-    title: "TCG Competitions",
-    description:
-      "Not only is our society a platform for trading card gamers to collect, trade and play, we also run frequent TCG events that are catered to all players. From tournaments, to drafting, and to casual formats, our dedicated team of TCG enthusiasts creates fun and unique events for all to enjoy. Some of our most popular titles include Magic the Gathering, Yu-Gi-Oh, and Vanguard. However, no matter how niche your game of choice may be, you are more than likely to find like-minded individuals in our discord server.",
-
-    // timeStr: "TIME HERE",
-    //locationStr: "LOCATION HERE",
-
-    photoPath: "/comp.webp",
-    photoAlt: "A photo of yu-gi-oh cards ",
-  },
-];
-
-// --- OTHER ---
-// Other
-// const otherHashmap = [
-//   {
-//     title: "Test2",
-//     description:
-//       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
-
-//     timeStr: "TIME HERE",
-//     locationStr: "LOCATION HERE",
-//     updatedLast: "",
-
-//     photoPath: "assets/events_pictures/regular/temp_event1.webp",
-//     photoAlt: "A photo of EVENT 2",
-//   },
-// ];
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export default function Events() {
+export default function About() {
   return (
-    <Suspense>
-      <div className="font-[family-name:var(--font-geist-sans)]">
-        <div className="flex flex-col mb-10 gap-10">
-          {regularEventsHashmap.length > 0 && (
-            <EventsSection
-              title="Sponsorships"
-              titleImgPath={"/hero.webp"}
-              eventslistHashmap={regularEventsHashmap}
-            />
-          )}
-        </div>
+    <div className="font-[family-name:var(--font-geist-sans)]">
+      <div className="flex flex-col mb-10 gap-10">
+        <ImageScrollTitle title="Major Sponsorships" imgPath="/hero.webp" />
+        {aboutHashMap.length > 0 && (
+          <AboutSection aboutListHashmap={aboutHashMap} />
+        )}
       </div>
-    </Suspense>
+    </div>
   );
 }
