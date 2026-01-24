@@ -49,6 +49,7 @@ const JoinPage = () => {
               className="button font-semibold max-w-[120px] justify-center"
               onClick={() =>
                 redirect(EXTERNAL_LINKS["discord"], RedirectType.push)
+
               }
             >
               <IoShareSocialSharp />
