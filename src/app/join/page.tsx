@@ -48,7 +48,7 @@ const JoinPage = () => {
             <button
               className="button font-semibold max-w-[120px] justify-center"
               onClick={() =>
-                redirect("https://discord.gg/unswttgsoc", RedirectType.push)
+                redirect("https://discord.gg/krWrN8ra6P", RedirectType.push)
               }
             >
               <IoShareSocialSharp />
