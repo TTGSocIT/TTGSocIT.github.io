@@ -6,7 +6,7 @@
  */
 
 type Props = {
-  aboutListHashmap: SponsorshipMap[];
+  majorSponsorshipHashmap: SponsorshipMap[];
   minorSponsorshipHashmap: SponsorshipMap[];
   startIdx?: number;
 };
@@ -18,7 +18,7 @@ type SponsorshipMap = {
   photoAlt: string;
 };
 
-export default function SponsorshipSection({ aboutListHashmap, startIdx }: Props) {
+export default function SponsorshipSection({ majorSponsorshipHashmap, startIdx }: Props) {
   /**
    * Object that Creates an About Section
    *
@@ -34,7 +34,7 @@ export default function SponsorshipSection({ aboutListHashmap, startIdx }: Props
   return (
     <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center justify-center">
       <div className="mt-10 flex flex-col items-center gap-20 px-10 md:px-[15dvw]">
-        {aboutListHashmap.map(
+        {majorSponsorshipHashmap.map(
           (
             {
               title,
