@@ -90,8 +90,8 @@ export default function SponsorshipsSection({
               } w-full justify-center gap-5 md:gap-10 md:min-h-64`}
             >
               {/* IMAGE  */}
-              <div className="w-full md:w-1/2 md:h-full my-auto aspect-video rounded-lg overflow-hidden">
-                <img src={photoPath} alt={photoAlt} />
+              <div className="w-full md:w-1/2 md:h-full my-auto aspect-video rounded-lg overflow-hidden flex items-center justify-center">
+                <img src={photoPath} alt={photoAlt} className="w-full h-full object-contain" />
               </div>
 
               <div className="w-full md:w-1/2 md:h-full text-left">
