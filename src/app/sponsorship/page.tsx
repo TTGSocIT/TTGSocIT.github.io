@@ -13,16 +13,6 @@ const majorSponsorshipMap = [
     photoAlt: "Domino's logo",
   }];
 
-
-const minorSponsorshipsMap = [
-  {
-    title: "Alliance Games",
-    description: "Lorem occaecat cupidatat non proident, sunt in culpa  officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus, vitae facilisis justo fermentum nec. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nam tristique sem at sapien gravida, eu dictum orci feugiat. Praesent sodales",
-    photoPath: "assets/sponsorships-logos/alliance-games-logo.jpg",
-    photoAlt: "Alliance Games Logo",
-  }
-];
-
 export default function Sponsorship() {
   return (
     <Suspense>
@@ -33,14 +23,6 @@ export default function Sponsorship() {
               title="Major Sponsorships"
               titleImgPath={"/hero.webp"}
               sponsorshipslistHashmap={majorSponsorshipMap}
-            />
-          )}
-          {minorSponsorshipsMap.length > 0 && (
-            <SponsorshipSection
-              title="Minor Sponsorships"
-              titleImgPath={"/hero.webp"}
-              sponsorshipslistHashmap={minorSponsorshipsMap}
-              startIdx={majorSponsorshipMap.length}
             />
           )}
         </div>
