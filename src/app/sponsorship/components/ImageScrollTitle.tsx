@@ -8,10 +8,14 @@ export default function ImageScrollTitle({title, imgPath}: InputType) {
   /**
    * A title card for sections that has a scrolling image background
    */
-
+//relative w-full min-h-64 mt-16 bg-cover bg-center bg-fixed flex flex-col items-center justify-center
+  //TODO: FIX THE BANNER SO NO WHITEPACE IS THERE. probalem will liekly solve itself if we get more sponsers. 
   return (
-      <div className="relative w-full min-h-64 mt-16 bg-cover bg-center bg-fixed flex flex-col items-center justify-center"  style={{backgroundImage: `url('${imgPath}')`,}}> {/* TODO: ADD A DARKEN FILTER TO BG IMAGE */}
-          <div className="text-white font-bold text-5xl md:text-7xl text-center z-20">
+      <div className="relative w-full min-h-64 bg-cover bg-top bg-fixed flex flex-col items-center justify-center"
+       style={{backgroundImage: `url('${imgPath}')`,}}> 
+       {" "}
+       {/* TODO: ADD A DARKEN FILTER TO BG IMAGE */}
+          <div className="px-3 text-white font-bold text-5xl md:text-7xl text-center z-20">
               {title}
           </div>
           <div className="absolute bg-black/70 w-full h-full"></div>
