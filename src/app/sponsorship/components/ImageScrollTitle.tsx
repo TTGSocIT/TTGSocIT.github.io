@@ -8,9 +8,9 @@ export default function ImageScrollTitle({title, imgPath}: InputType) {
   /**
    * A title card for sections that has a scrolling image background
    */
-
+//relative w-full min-h-64 mt-16 bg-cover bg-center bg-fixed flex flex-col items-center justify-center
   return (
-      <div className="relative w-full min-h-64 bg-cover bg-top bg-fixed flex flex-col items-center justify-start"
+      <div className="relative w-full min-h-64 bg-cover bg-top bg-fixed flex flex-col items-center justify-center"
        style={{backgroundImage: `url('${imgPath}')`,}}> 
        {" "}
        {/* TODO: ADD A DARKEN FILTER TO BG IMAGE */}
