@@ -10,7 +10,7 @@ export default function ImageScrollTitle({title, imgPath}: InputType) {
    */
 
   return (
-      <div className="relative w-full min-h-64 mt-16 bg-cover bg-center bg-fixed flex flex-col items-center justify-center"
+      <div className="relative w-full min-h-64 mt-16 bg-cover bg-center bg-fixed flex flex-col items-center justify-start"
        style={{backgroundImage: `url('${imgPath}')`,}}> 
        {" "}
        {/* TODO: ADD A DARKEN FILTER TO BG IMAGE */}
