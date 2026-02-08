@@ -14,7 +14,7 @@ const EventCard = ({ name, image }: EventCardProps) => {
   const handleClick = useCallback(() => {
     const eventId = titleCaseToId(name);
     router.push(`/events?event=${eventId}`);
-  }, [name]);
+  }, [name,router]);
 
   return (
     <div
