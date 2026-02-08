@@ -20,7 +20,7 @@ export default function Sponsorship() {
         <div className="flex flex-col mb-10 gap-10">
           {majorSponsorshipMap.length > 0 && (
             <SponsorshipSection
-              title="Major Sponsorships"
+              title="Primary Sponsorships"
               titleImgPath={"/hero.webp"}
               sponsorshipslistHashmap={majorSponsorshipMap}
             />
