@@ -7,7 +7,7 @@ import SponsorshipSection from "./components/SponsorshipSection";
 const majorSponsorshipMap = [
   {
     title: "Domino’s Pizza Kensington",
-    description: "We are overjoyed that one of the most convenient, iconic, and budget friendly pizza establishments near UNSW chose to sponsor Table top games society. Domino’s has generously agreed to provide free pizza at selected events throughout 2026. If you want to show them some support, their shop is located at 3/230 Anzac Parade, Kensington. a 10 minute walk away from unsw.",
+    description: "We are overjoyed that one of the most convenient, iconic, and budget friendly pizza establishments near UNSW chose to sponsor Table top games society. Domino’s has generously agreed to provide free pizza at selected events throughout 2026. If you want to show them some support, their shop is located at 3/230 Anzac Parade, Kensington. A 10 minute walk away from UNSW.",
     // image aspect ratio is 16:9
     photoPath: "assets/sponsorships-logos/dominos-logo.png",
     photoAlt: "Domino's logo",
