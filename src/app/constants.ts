@@ -8,6 +8,6 @@ export const EXTERNAL_LINKS = {
     instagram: "https://www.instagram.com/unswttgsoc/",
     facebook: "https://www.facebook.com/unswttgsoc/",
     linktree: "https://linktr.ee/unswttgsoc",
-    arc: "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VwT",
+    arc: "https://campus.hellorubric.com/?tab=memberships&s=12717",
     email: "unswttgsoc@gmail.com",
 }

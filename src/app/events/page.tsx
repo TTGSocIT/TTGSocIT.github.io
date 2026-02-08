@@ -31,9 +31,9 @@ const regularEventsHashmap = [
     photoAlt: "People playing boardgames at our weekly boardgame events",
 
     // All fields below this comment are optional. If you leave them blank they're skipped and don't render
-    timeStr: "Every Friday 4pm - 9pm",
-    locationStr: "Matthews 310 (and 301, 306, 308, 309 from 5pm)",
-    updatedLast: "7th of June 2025",
+    timeStr: "Friday's 3pm - 9pm",
+    locationStr: "Matthews 101,102,103 ",
+    updatedLast: "9th of February 2026",
 
     // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
    // optionalBottomJsx: (
@@ -51,8 +51,8 @@ const regularEventsHashmap = [
     photoAlt: "People playing a D&D session at our fortnightly campaign events",
 
     timeStr: "Fortnightly on Sundays 12-4pm",
-    locationStr: "Quadrangle 1042, 1045 - 1048",
-    updatedLast: "7th of June 2025",
+    locationStr: "Goldstein G02, G03, G04, G05 ",
+    updatedLast: "7th of February 2026",
   },
   {
     title: "TCG Weekly Events ",
@@ -62,9 +62,9 @@ const regularEventsHashmap = [
     photoPath: "tcg2.webp",
     photoAlt: "A collection of Trading cards",
 
-    timeStr: "Every Friday 4pm - 9pm",
-    locationStr: "Matthews 310",
-    updatedLast: "8th of February 2025",
+    timeStr: "Friday's 4pm - 9pm",
+    locationStr: "Matthews 102",
+    updatedLast: "7th of February 2026",
   },
 ];
 
