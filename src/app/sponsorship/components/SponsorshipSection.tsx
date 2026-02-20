@@ -66,7 +66,7 @@ export default function SponsorshipsSection({
   }, [query]);
 
   return (
-    <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center justify-center">
+    <div className="w-full relative overflow-hidden flex flex-col items-center justify-center">
       <ImageScrollTitle title={title} imgPath={titleImgPath} />{" "}
       {/* NOTE: CAN CHANGE BACKGROUND IMG HERE */}
       <div className="mt-10 flex flex-col items-center gap-20 px-10 md:px-[15dvw]">
