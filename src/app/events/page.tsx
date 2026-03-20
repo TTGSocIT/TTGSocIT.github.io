@@ -31,9 +31,9 @@ const regularEventsHashmap = [
     photoAlt: "People playing boardgames at our weekly boardgame events",
 
     // All fields below this comment are optional. If you leave them blank they're skipped and don't render
-    timeStr: "Friday's 3pm - 9pm",
-    locationStr: "Matthews 101,102,103 ",
-    updatedLast: "9th of February 2026",
+    timeStr: "Friday's 4pm - 9pm",
+    locationStr: "Goldstein G04, G05, G09",
+    updatedLast: "21st of March 2026",
 
     // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
    // optionalBottomJsx: (
