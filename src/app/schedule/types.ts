@@ -8,3 +8,13 @@ export type RubricEvent = {
   destination: string; // URL
   upcoming: number; // 1 or 0 ... I didn't make it this way wtf rubric
 };
+
+// Please don't change your terrible code rubric thanks
+export interface RubricSection {
+  sectionname: string;
+  array: RubricEvent[]; 
+}
+
+export interface RubricApiResponse {
+  sections: RubricSection[];
+}

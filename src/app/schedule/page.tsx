@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import ImageScrollTitle from "./components/ImageScrollTitle";
 import EventCard from "./components/EventCard";
 import PastEventCard from "./components/PastEventCard";
-import { type RubricEvent } from "./types";
+import { RubricApiResponse, type RubricEvent } from "./types";
 
 // Page showing all upcoming and past events (pulled from rubric API)
 export default function Schedule() {
@@ -35,11 +35,11 @@ export default function Schedule() {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const result = await response.json();
+        const result = await response.json() as RubricApiResponse;
 
         // Get events section from json
         const eventsSection = result.sections.find(
-          (sec: any) => sec.sectionname === "Events"
+          (sec) => sec.sectionname === "Events"
         );
 
         if (eventsSection && eventsSection.array) {
