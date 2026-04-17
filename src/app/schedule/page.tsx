@@ -6,6 +6,7 @@ import EventCard from "./components/EventCard";
 import PastEventCard from "./components/PastEventCard";
 import { type RubricEvent } from "./types";
 
+// Page showing all upcoming and past events (pulled from rubric API)
 export default function Schedule() {
   const [upcomingEvents, setUpcomingEvents] = useState<RubricEvent[]>([]);
   const [pastEvents, setPastEvents] = useState<RubricEvent[]>([]);

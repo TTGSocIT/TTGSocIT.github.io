@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { RubricEventDetails } from "../types";
 
+// This is just a reskin of the events page you'd see if you clicked on rubric
+// TODO add a way to upload photos
 export default function EventDetailsPage() {
   const params = useParams();
   const eventId = params.id as string;
@@ -13,6 +15,7 @@ export default function EventDetailsPage() {
   const [event, setEvent] = useState<RubricEventDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Another rubric API usage hope they don't change anything 💀
   useEffect(() => {
     const fetchEventData = async () => {
       if (!eventId) return;
@@ -107,6 +110,8 @@ export default function EventDetailsPage() {
         <p className="text-md text-gray-500 font-normal mb-5">Ended: {event.eventEndTime}</p>
 
         <hr className="border-gray-200 mb-10" />
+
+        {/* ADD photos in like a grid here or smth */}
 
         {/* Event Description (Rendering raw HTML) */}
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Details</h2>

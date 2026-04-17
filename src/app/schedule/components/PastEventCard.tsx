@@ -2,6 +2,7 @@ import Link from "next/link";
 import { type RubricEvent } from "../types";
 
 // TODO make a way to upload images and prevent pressing on the past event if no photos exist
+// Each card is clickable and leads to a page for that specific event
 export default function PastEventCard({ event }: { event: RubricEvent }) {
   return (
     <Link href={`/pastEvents/${event.eventid}`} className="group">
