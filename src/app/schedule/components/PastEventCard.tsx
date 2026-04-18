@@ -6,7 +6,7 @@ import { type RubricEvent } from "../types";
 export default function PastEventCard({ event }: { event: RubricEvent }) {
   return (
     <Link href={`/pastEvents/${event.eventid}`} className="group">
-      <div className="flex flex-col h-full bg-white rounded-3xl shadow-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+      <div className="flex flex-col h-full bg-white rounded-3xl shadow-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden">
         
         {/* Image Container with Hover Overlay */}
         <div className="w-full h-56 overflow-hidden relative bg-gray-100">

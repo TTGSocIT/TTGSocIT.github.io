@@ -8,6 +8,7 @@ import { RubricApiResponse, type RubricEvent } from "./types";
 
 // Page showing all upcoming and past events (pulled from rubric API)
 export default function Schedule() {
+  const [todayEvents, setTodayEvents] = useState<RubricEvent[]>([]);
   const [upcomingEvents, setUpcomingEvents] = useState<RubricEvent[]>([]);
   const [pastEvents, setPastEvents] = useState<RubricEvent[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -44,9 +45,19 @@ export default function Schedule() {
 
         if (eventsSection && eventsSection.array) {
           const allEvents: RubricEvent[] = eventsSection.array;
+          
+          const now = new Date();
+          const todayString = now.toLocaleDateString("en-GB", {
+            weekday: "short",
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          })
+          const isToday = (event: RubricEvent) => event.formatteddate.includes(todayString);
 
-          setUpcomingEvents(allEvents.filter((e) => e.upcoming === 1));
-          setPastEvents(allEvents.filter((e) => e.upcoming === 0));
+          setTodayEvents(allEvents.filter((e) => isToday(e)));
+          setUpcomingEvents(allEvents.filter((e) => e.upcoming === 1 && !isToday(e)));
+          setPastEvents(allEvents.filter((e) => e.upcoming === 0 && !isToday(e)));
         }
       } catch (err) {
         console.error("Error fetching schedule:", err);
@@ -58,7 +69,7 @@ export default function Schedule() {
     fetchSocietyData();
   }, []);
 
-  const headerClasses = "text-4xl font-extrabold text-gray-900 mb-8 border-b-4 border-blue-600 pb-2";
+  const headerClasses = "text-4xl font-extrabold text-gray-900 mb-8 border-b-4 pb-2";
   const gridClasses = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
 
   return (
@@ -72,10 +83,22 @@ export default function Schedule() {
           </div>
         ) : (
           <>
-            {/* UPCOMING EVENTS SECTION */}
+            {/* TODAY'S EVENTS */}
+            {todayEvents.length > 0 && (
+              <section>
+                <h2 className={`${headerClasses} border-emerald-600`}> Today </h2>
+                <div className={gridClasses}>
+                  {todayEvents.map((event) => (
+                    <EventCard key={event.eventid} event={event} />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* UPCOMING EVENTS */}
             {upcomingEvents.length > 0 && (
               <section>
-                <h2 className={headerClasses}> Upcoming Events </h2>
+                <h2 className={`${headerClasses} border-blue-600`}> Upcoming Events </h2>
                 <div className={gridClasses}>
                   {upcomingEvents.map((event) => (
                     <EventCard key={event.eventid} event={event} />
@@ -84,10 +107,10 @@ export default function Schedule() {
               </section>
             )}
 
-            {/* PAST EVENTS SECTION */}
+            {/* PAST EVENTS */}
             {pastEvents.length > 0 && (
               <section>
-                <h2 className={headerClasses}> Past Events </h2>
+                <h2 className={`${headerClasses} border-gray-400 text-gray-600`}> Past Events </h2>
                 <div className={gridClasses}>
                   {pastEvents.map((event) => (
                     <PastEventCard key={event.eventid} event={event} />
