@@ -1,4 +1,5 @@
 import { type RubricEvent } from "../types";
+import Image from "next/image";
 
 export default function EventCard({ event }: { event: RubricEvent }) {
   return (
@@ -9,11 +10,13 @@ export default function EventCard({ event }: { event: RubricEvent }) {
       className="flex flex-col bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group cursor-pointer"
     >
       {/* Image Container */}
-      <div className="w-full h-48 overflow-hidden relative bg-gray-100">
-        <img
+      <div className="w-full aspect-[16/9] overflow-hidden relative bg-gray-100">
+        <Image
           src={event.image}
           alt={`Banner for ${event.title}`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
 

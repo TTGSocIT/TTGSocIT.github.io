@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { type RubricEvent } from "../types";
+import Image from "next/image";
 
 // TODO make a way to upload images and prevent pressing on the past event if no photos exist
 // Each card is clickable and leads to a page for that specific event
@@ -9,11 +10,13 @@ export default function PastEventCard({ event }: { event: RubricEvent }) {
       <div className="flex flex-col h-full bg-white rounded-3xl shadow-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden">
         
         {/* Image Container with Hover Overlay */}
-        <div className="w-full h-56 overflow-hidden relative bg-gray-100">
-          <img
+        <div className="w-full aspect-[16/9] overflow-hidden relative bg-gray-100">
+          <Image
             src={event.image}
             alt={`Banner for ${event.title}`}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
           {/* Temporary hover overlay */}
           <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
