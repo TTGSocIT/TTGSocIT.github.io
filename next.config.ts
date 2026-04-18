@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "**.hellorubric.com",
         port: "",
-        pathname: "/**",
+        pathname: "/uploaded_assets/**",
       },
       {
         protocol: 'https',
