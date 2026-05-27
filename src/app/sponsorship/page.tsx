@@ -11,6 +11,12 @@ const majorSponsorshipMap = [
     // image aspect ratio is 16:9
     photoPath: "assets/sponsorships-logos/dominos-logo.png",
     photoAlt: "Domino's logo",
+  },
+  {
+    title: "Jane Street",
+    description: "Jane Street is a global liquidity provider and trading firm that uses sophisticated quantitative analysis and a deep understanding of market mechanics to help keep prices consistent and reliable.",
+    photoPath: "assets/sponsorships-logos/jane-street.png",
+    photoAlt: "Jane Street's logo",
   }];
 
 export default function Sponsorship() {
