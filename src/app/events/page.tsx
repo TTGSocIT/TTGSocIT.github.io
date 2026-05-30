@@ -24,14 +24,18 @@ const regularEventsHashmap = [
   {
     title: "Weekly Board Games",
     description:
-      "TTGSoc has a huge selection of board games for players of all skill levels! Whether you're up for a quick and casual round of Exploding Kittens or a deep, strategic battle in Root, we've got something for you, and plenty of enthusiastic players to join in. Drop by our weekly sessions to explore new games, challenge your friends, and meet like-minded people. LOCATION SCHEDULE: Thursday sessions run in Morven Brown G06 (Wk 1-7), AGSM 107 (Wk 8-9), and Quad 1042 (Wk 10). Friday sessions are in the Mathews Building: Rooms 104 & 103 (Wk 1-2, 4-5, 8, 10); Rooms 310, 311, & 303 (Wk 3, 6); and Rooms 311 & 303 (Wk 7, 9).",
+      "TTGSoc has a huge selection of board games for players of all skill levels! Whether you're up for a quick and casual round of Exploding Kittens or a deep, strategic battle in Root, we've got something for you, and plenty of enthusiastic players to join in. Drop by our weekly sessions to explore new games, challenge your friends, and meet like-minded people.",
 
     // image aspect ratio is 16:9
     photoPath: "/Friday_Boardgames.webp",
     photoAlt: "People playing boardgames at our weekly boardgame events",
 
-    timeStr: "Thursdays & Fridays 4pm - 9pm",
-    locationStr: "Various (Check description for weekly rooms)",
+    timeStr: "Thursdays · 4–9pm",
+    locationStr:
+      "Morven Brown G06",
+    secondaryTimeStr: "Fridays · 4–9pm",
+    secondaryLocationStr:
+      "Mathews 104 & 103",
     updatedLast: "27th of May 2026",
 
     // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
@@ -44,7 +48,7 @@ const regularEventsHashmap = [
   {
     title: "Weekly RPG",
     description:
-      "Looking to explore tabletop roleplaying beyond traditional D&D? Join us for our Weekly RPG sessions! We alternate our Sunday slot with the D&D Campaign",
+      "From sci-fi horror to urban fantasy, roleplaying games let you explore your favourite genres first hand, taking the position of a character in an episodic adventure. Our bi-weekly one shots are the perfect way for you to find new game systems, with our helpful Game Masters on hand to weave a thrilling story and teach you any rules.",
 
     photoPath: "/lost_lands_dnd.webp", // Reusing the DND campaign image
     photoAlt: "People playing a tabletop RPG session",
@@ -74,7 +78,7 @@ const regularEventsHashmap = [
     photoAlt: "A collection of Trading cards",
 
     timeStr: "Fridays 4pm - 9pm",
-    locationStr: "Mathews Building (Shared with Friday Board Games)",
+    locationStr: "Mathews 104 & 103",
     updatedLast: "27th of May 2026",
   },
 ];

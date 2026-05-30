@@ -25,6 +25,8 @@ type EventsMap = {
 
   timeStr?: string;
   locationStr?: string;
+  secondaryTimeStr?: string;
+  secondaryLocationStr?: string;
   updatedLast?: string;
   optionalBottomJsx?: React.ReactElement; // IDK the type here for JSX ima do any
 
@@ -84,6 +86,8 @@ export default function EventsSection({
                 description,
                 timeStr,
                 locationStr,
+                secondaryTimeStr,
+                secondaryLocationStr,
                 updatedLast,
                 photoPath,
                 photoAlt,
@@ -109,14 +113,37 @@ export default function EventsSection({
                   <h1 className="font-bold text-4xl text-titleColor text-center md:text-left">
                     {title}
                   </h1>
-                  {(timeStr || locationStr) && (
-                    <div className="flex flex-row gap-10 justify-center md:justify-start italic">
-                      {timeStr && (
-                        <h2 className="text-subTitleColor">{timeStr}</h2>
-                      )}
-                      {locationStr && (
-                        <h2 className="text-subTitleColor">{locationStr}</h2>
-                      )}
+                  {(timeStr ||
+                    locationStr ||
+                    secondaryTimeStr ||
+                    secondaryLocationStr) && (
+                    <div className="grid w-fit max-w-full grid-cols-[auto_minmax(0,1fr)] gap-x-6 italic text-gray-700 mx-auto md:mx-0">
+                      {[
+                        { time: timeStr, location: locationStr },
+                        {
+                          time: secondaryTimeStr,
+                          location: secondaryLocationStr,
+                        },
+                      ]
+                        .filter(({ time, location }) => time || location)
+                        .flatMap(({ time, location }, rowIdx) => [
+                          time ? (
+                            <h2
+                              key={`time-${rowIdx}`}
+                              className="text-subTitleColor whitespace-nowrap"
+                            >
+                              {time}
+                            </h2>
+                          ) : null,
+                          location ? (
+                            <h2
+                              key={`location-${rowIdx}`}
+                              className="text-subTitleColor text-left"
+                            >
+                              {location}
+                            </h2>
+                          ) : null,
+                        ])}
                     </div>
                   )}
                   {updatedLast && (
