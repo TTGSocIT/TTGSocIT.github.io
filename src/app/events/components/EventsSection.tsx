@@ -79,7 +79,7 @@ export default function EventsSection({
       <ImageScrollTitle title={title} imgPath={titleImgPath} />
       <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center justify-center">
         {/* NOTE: CAN CHANGE BACKGROUND IMG HERE */}
-        <div className="mt-10 flex flex-col items-center gap-20 px-10 md:px-[15dvw]">
+        <div className="flex flex-col items-center gap-20 px-6 md:px-10 w-full max-w-7xl">
           {eventslistHashmap.map(
             (
               {
@@ -101,11 +101,11 @@ export default function EventsSection({
                 id={titleCaseToId(title)}
                 className={`flex flex-col ${
                   (idx + (startIdx || 0)) % 2 === 0
-                    ? "xl:flex-row"
-                    : "xl:flex-row-reverse"
+                    ? "lg:flex-row"
+                    : "lg:flex-row-reverse"
                 } w-full justify-center gap-5 md:gap-10 md:min-h-64`}
               >
-                <div className="relative w-full xl:w-1/2 xl:h-full my-auto aspect-video rounded-lg overflow-hidden">
+                <div className="relative w-full lg:w-1/2 lg:h-full my-auto aspect-video rounded-lg overflow-hidden">
                   <Image
                     src={photoPath.startsWith("/") ? photoPath : `/${photoPath}`}
                     alt={photoAlt}
@@ -115,8 +115,8 @@ export default function EventsSection({
                   />
                 </div>
 
-                <div className="w-full xl:w-1/2 xl:h-full text-left">
-                  <h1 className="font-bold text-4xl text-titleColor text-center xl:text-left">
+                <div className="w-full lg:w-1/2 lg:h-full text-left">
+                  <h1 className="font-bold text-4xl text-titleColor text-center lg:text-left">
                     {title}
                   </h1>
                   {(timeStr ||
