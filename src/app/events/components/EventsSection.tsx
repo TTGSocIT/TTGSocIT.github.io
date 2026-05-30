@@ -2,6 +2,7 @@
 
 import { titleCaseToId } from "@/app/utils/titleCaseToId";
 import ImageScrollTitle from "./ImageScrollTitle";
+import Image from "next/image";
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
@@ -100,24 +101,29 @@ export default function EventsSection({
                 id={titleCaseToId(title)}
                 className={`flex flex-col ${
                   (idx + (startIdx || 0)) % 2 === 0
-                    ? "md:flex-row"
-                    : "md:flex-row-reverse"
+                    ? "xl:flex-row"
+                    : "xl:flex-row-reverse"
                 } w-full justify-center gap-5 md:gap-10 md:min-h-64`}
               >
-                {/* IMAGE  */}
-                <div className="w-full md:w-1/2 md:h-full my-auto aspect-video rounded-lg overflow-hidden">
-                  <img src={photoPath} alt={photoAlt} />
+                <div className="relative w-full xl:w-1/2 xl:h-full my-auto aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src={photoPath.startsWith("/") ? photoPath : `/${photoPath}`}
+                    alt={photoAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
 
-                <div className="w-full md:w-1/2 md:h-full text-left">
-                  <h1 className="font-bold text-4xl text-titleColor text-center md:text-left">
+                <div className="w-full xl:w-1/2 xl:h-full text-left">
+                  <h1 className="font-bold text-4xl text-titleColor text-center xl:text-left">
                     {title}
                   </h1>
                   {(timeStr ||
                     locationStr ||
                     secondaryTimeStr ||
                     secondaryLocationStr) && (
-                    <div className="grid w-fit max-w-full grid-cols-[auto_minmax(0,1fr)] gap-x-6 italic text-gray-700 mx-auto md:mx-0">
+                    <div className="grid w-fit max-w-full grid-cols-[auto_minmax(0,1fr)] gap-x-6 italic text-gray-700 mx-auto lg:mx-0">
                       {[
                         { time: timeStr, location: locationStr },
                         {
