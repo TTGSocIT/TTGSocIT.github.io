@@ -96,7 +96,7 @@ export default function SponsorshipsSection({
                 <h2 className="font-bold text-3xl md:text-4xl text-titleColor mb-4">
                   {title}
                 </h2>
-                <p className="text-base md:text-xl leading-relaxed text-gray-700">
+                <p className="text-base md:text-xl leading-relaxed text-gray-700 whitespace-pre-line">
                   {description}
                 </p>
               </div>
