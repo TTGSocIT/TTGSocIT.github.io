@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 /**
  * --- DEFINITION OBJECT ---
  * This object here defines how the page gets laid out.
@@ -63,7 +65,7 @@ export default function AboutSection({ aboutListHashmap, startIdx }: Props) {
             >
               {/* IMAGE  */}
               <div className="w-full md:w-1/2 md:h-full my-auto aspect-video rounded-lg overflow-hidden">
-                <img src={photoPath} alt={photoAlt} />
+                <Image src={photoPath} alt={photoAlt} width={850} height={450}/>
               </div>
 
               <div className="w-full md:w-1/2 md:h-full text-left">
