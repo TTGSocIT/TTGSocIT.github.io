@@ -2,6 +2,7 @@
 
 import { titleCaseToId } from "@/app/utils/titleCaseToId";
 import ImageScrollTitle from "./ImageScrollTitle";
+import Image from "next/image";
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
@@ -25,6 +26,8 @@ type EventsMap = {
 
   timeStr?: string;
   locationStr?: string;
+  secondaryTimeStr?: string;
+  secondaryLocationStr?: string;
   updatedLast?: string;
   optionalBottomJsx?: React.ReactElement; // IDK the type here for JSX ima do any
 
@@ -76,7 +79,7 @@ export default function EventsSection({
       <ImageScrollTitle title={title} imgPath={titleImgPath} />
       <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center justify-center">
         {/* NOTE: CAN CHANGE BACKGROUND IMG HERE */}
-        <div className="mt-10 flex flex-col items-center gap-20 px-10 md:px-[15dvw]">
+        <div className="flex flex-col items-center gap-20 px-6 md:px-10 w-full max-w-7xl">
           {eventslistHashmap.map(
             (
               {
@@ -84,6 +87,8 @@ export default function EventsSection({
                 description,
                 timeStr,
                 locationStr,
+                secondaryTimeStr,
+                secondaryLocationStr,
                 updatedLast,
                 photoPath,
                 photoAlt,
@@ -96,27 +101,55 @@ export default function EventsSection({
                 id={titleCaseToId(title)}
                 className={`flex flex-col ${
                   (idx + (startIdx || 0)) % 2 === 0
-                    ? "md:flex-row"
-                    : "md:flex-row-reverse"
+                    ? "lg:flex-row"
+                    : "lg:flex-row-reverse"
                 } w-full justify-center gap-5 md:gap-10 md:min-h-64`}
               >
-                {/* IMAGE  */}
-                <div className="w-full md:w-1/2 md:h-full my-auto aspect-video rounded-lg overflow-hidden">
-                  <img src={photoPath} alt={photoAlt} />
+                <div className="relative w-full lg:w-1/2 lg:h-full my-auto aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src={photoPath.startsWith("/") ? photoPath : `/${photoPath}`}
+                    alt={photoAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
 
-                <div className="w-full md:w-1/2 md:h-full text-left">
-                  <h1 className="font-bold text-4xl text-titleColor text-center md:text-left">
+                <div className="w-full lg:w-1/2 lg:h-full text-left">
+                  <h1 className="font-bold text-4xl text-titleColor text-center lg:text-left">
                     {title}
                   </h1>
-                  {(timeStr || locationStr) && (
-                    <div className="flex flex-row gap-10 justify-center md:justify-start italic">
-                      {timeStr && (
-                        <h2 className="text-subTitleColor">{timeStr}</h2>
-                      )}
-                      {locationStr && (
-                        <h2 className="text-subTitleColor">{locationStr}</h2>
-                      )}
+                  {(timeStr ||
+                    locationStr ||
+                    secondaryTimeStr ||
+                    secondaryLocationStr) && (
+                    <div className="grid w-fit max-w-full grid-cols-[auto_minmax(0,1fr)] gap-x-6 italic text-gray-700 mx-auto lg:mx-0">
+                      {[
+                        { time: timeStr, location: locationStr },
+                        {
+                          time: secondaryTimeStr,
+                          location: secondaryLocationStr,
+                        },
+                      ]
+                        .filter(({ time, location }) => time || location)
+                        .flatMap(({ time, location }, rowIdx) => [
+                          time ? (
+                            <h2
+                              key={`time-${rowIdx}`}
+                              className="text-subTitleColor whitespace-nowrap"
+                            >
+                              {time}
+                            </h2>
+                          ) : null,
+                          location ? (
+                            <h2
+                              key={`location-${rowIdx}`}
+                              className="text-subTitleColor text-left"
+                            >
+                              {location}
+                            </h2>
+                          ) : null,
+                        ])}
                     </div>
                   )}
                   {updatedLast && (

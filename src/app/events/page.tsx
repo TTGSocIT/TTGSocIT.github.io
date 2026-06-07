@@ -24,16 +24,19 @@ const regularEventsHashmap = [
   {
     title: "Weekly Board Games",
     description:
-      "TTGSoc has a huge selection of board games for players of all skill levels! Whether you're up for a quick and casual round of Exploding Kittens or a deep, strategic battle in Root, we've got something for you, and plenty of enthusiastic players to join in. Drop by our weekly Friday board game session to explore new games, challenge your friends, and meet like-minded people in a fun and welcoming environment. We’re looking forward to seeing you there!",
+      "TTGSoc has a huge selection of board games for players of all skill levels! Whether you're up for a quick and casual round of Exploding Kittens or a deep, strategic battle in Root, we've got something for you, and plenty of enthusiastic players to join in. Drop by our weekly sessions to explore new games, challenge your friends, and meet like-minded people.",
 
     // image aspect ratio is 16:9
     photoPath: "/Friday_Boardgames.webp",
     photoAlt: "People playing boardgames at our weekly boardgame events",
 
-    // All fields below this comment are optional. If you leave them blank they're skipped and don't render
-    timeStr: "Friday's 4pm - 9pm",
-    locationStr: "Goldstein G04, G05, G09",
-    updatedLast: "21st of March 2026",
+    timeStr: "Thursdays · 4–9pm",
+    locationStr:
+      "Morven Brown G06",
+    secondaryTimeStr: "Fridays · 4–9pm",
+    secondaryLocationStr:
+      "Mathews 104 & 103",
+    updatedLast: "27th of May 2026",
 
     // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
    // optionalBottomJsx: (
@@ -43,6 +46,18 @@ const regularEventsHashmap = [
    // ),
   },
   {
+    title: "Weekly RPG",
+    description:
+      "From sci-fi horror to urban fantasy, roleplaying games let you explore your favourite genres first hand, taking the position of a character in an episodic adventure. Our bi-weekly one shots are the perfect way for you to find new game systems, with our helpful Game Masters on hand to weave a thrilling story and teach you any rules.",
+
+    photoPath: "/RPG_table.webp", // Reusing the DND campaign image
+    photoAlt: "People playing a tabletop RPG session",
+
+    timeStr: "Alternating Sundays 12pm - 6pm",
+    locationStr: "Goldstein G02, G03, G04, G05",
+    updatedLast: "27th of May 2026",
+  },
+  {
     title: "DND Campaign",
     description:
       "Dungeons & Dragons is one of the most well-known tabletop RPGs, but finding a group to play with isn’t always easy. That’s where we come in! Our society campaign is designed to make D&D accessible to everyone—whether you’re a complete newbie or an experienced player struggling to find a consistent group. No clue how to play? Our friendly Dungeon Masters (DMs) and experienced players are happy to teach you. Not sure how to create a character? We’ve got the resources and guidance to make it a breeze. Worried about commitment? Sessions are completely drop-in, so you can play whenever your schedule allows. Come roll some dice, tell epic stories, and embark on unforgettable adventures with us! ",
@@ -50,9 +65,9 @@ const regularEventsHashmap = [
     photoPath: "/lost_lands_dnd.webp",
     photoAlt: "People playing a D&D session at our fortnightly campaign events",
 
-    timeStr: "Fortnightly on Sundays 12-4pm",
+    timeStr: "Alternating Sundays 12pm - 6pm",
     locationStr: "Goldstein G02, G03, G04, G05 ",
-    updatedLast: "7th of February 2026",
+    updatedLast: "27th of May 2026",
   },
   {
     title: "TCG Weekly Events ",
@@ -62,9 +77,9 @@ const regularEventsHashmap = [
     photoPath: "tcg2.webp",
     photoAlt: "A collection of Trading cards",
 
-    timeStr: "Friday's 4pm - 9pm",
-    locationStr: "Matthews 102",
-    updatedLast: "7th of February 2026",
+    timeStr: "Fridays 4pm - 9pm",
+    locationStr: "Mathews 104 & 103",
+    updatedLast: "27th of May 2026",
   },
 ];
 
