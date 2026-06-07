@@ -50,7 +50,7 @@ const regularEventsHashmap = [
     description:
       "From sci-fi horror to urban fantasy, roleplaying games let you explore your favourite genres first hand, taking the position of a character in an episodic adventure. Our bi-weekly one shots are the perfect way for you to find new game systems, with our helpful Game Masters on hand to weave a thrilling story and teach you any rules.",
 
-    photoPath: "/lost_lands_dnd.webp", // Reusing the DND campaign image
+    photoPath: "/rpg_table.webp", // Reusing the DND campaign image
     photoAlt: "People playing a tabletop RPG session",
 
     timeStr: "Alternating Sundays 12pm - 6pm",
