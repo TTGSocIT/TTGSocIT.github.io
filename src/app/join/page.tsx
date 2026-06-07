@@ -112,7 +112,7 @@ const JoinPage = () => {
                 games or TTRPGs, looking to develop teamwork and communication
                 skills, or even just wanting to pad your resume with some
                 extracurricular experiences, applying for a subcommittee,
-                director or executive role would be perfect for you! Our 2025
+                director or executive role would be perfect for you! Our
                 subcommittee applications are OPEN NOW! ! !
               </p>
 
@@ -120,7 +120,7 @@ const JoinPage = () => {
                 className="button font-semibold justify-center"
                 onClick={() =>
                   redirect(
-                    "https://docs.google.com/forms/d/e/1FAIpQLSfHoafWCgH2Udboj7KE_A53HduvegDnU3PNevCwOdQHs1NYTQ/viewform?usp=sharing",
+                    "https://docs.google.com/forms/d/e/1FAIpQLScWDgxOQXag1hR6tlxMRofx77lPmJjhmD8O-gaFZBax5ABTCg/viewform?usp=sharing&ouid=105344058381002757830",
                     RedirectType.push
                   )
                 }
