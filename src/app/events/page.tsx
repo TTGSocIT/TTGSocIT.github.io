@@ -46,18 +46,6 @@ const regularEventsHashmap = [
    // ),
   },
   {
-    title: "Weekly RPG",
-    description:
-      "From sci-fi horror to urban fantasy, roleplaying games let you explore your favourite genres first hand, taking the position of a character in an episodic adventure. Our bi-weekly one shots are the perfect way for you to find new game systems, with our helpful Game Masters on hand to weave a thrilling story and teach you any rules.",
-
-    photoPath: "/rpg_table.webp", // Reusing the DND campaign image
-    photoAlt: "People playing a tabletop RPG session",
-
-    timeStr: "Alternating Sundays 12pm - 6pm",
-    locationStr: "Goldstein G02, G03, G04, G05",
-    updatedLast: "27th of May 2026",
-  },
-  {
     title: "DND Campaign",
     description:
       "Dungeons & Dragons is one of the most well-known tabletop RPGs, but finding a group to play with isn’t always easy. That’s where we come in! Our society campaign is designed to make D&D accessible to everyone—whether you’re a complete newbie or an experienced player struggling to find a consistent group. No clue how to play? Our friendly Dungeon Masters (DMs) and experienced players are happy to teach you. Not sure how to create a character? We’ve got the resources and guidance to make it a breeze. Worried about commitment? Sessions are completely drop-in, so you can play whenever your schedule allows. Come roll some dice, tell epic stories, and embark on unforgettable adventures with us! ",
@@ -65,7 +53,7 @@ const regularEventsHashmap = [
     photoPath: "/lost_lands_dnd.webp",
     photoAlt: "People playing a D&D session at our fortnightly campaign events",
 
-    timeStr: "Alternating Sundays 12pm - 6pm",
+    timeStr: "Fortnightly on Sundays 12pm - 6pm",
     locationStr: "Goldstein G02, G03, G04, G05 ",
     updatedLast: "27th of May 2026",
   },
