@@ -4,6 +4,7 @@ import { titleCaseToId } from "@/app/utils/titleCaseToId";
 import ImageScrollTitle from "./ImageScrollTitle";
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 /**
  * --- DEFINITION OBJECT ---
@@ -70,40 +71,38 @@ export default function SponsorshipsSection({
       <ImageScrollTitle title={title} imgPath={titleImgPath} />
       <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center justify-center">
         {/* NOTE: CAN CHANGE BACKGROUND IMG HERE */}
-        <div className="mt-10 flex flex-col items-center gap-20 px-10 md:px-[15dvw]">
+        <div className="flex flex-col items-center gap-20 px-6 md:px-10 w-full max-w-6xl">
           {sponsorshipslistHashmap.map(
-            (
-              {
-                title,
-                description,
-                photoPath,
-                photoAlt,
-              },
-              idx
-            ) => (
-              <div
-                key={`event-${idx}`}
-                id={titleCaseToId(title)}
-                className={`flex flex-col ${
-                  (idx + (startIdx || 0)) % 2 === 0
-                    ? "md:flex-row"
-                    : "md:flex-row-reverse"
-                } w-full justify-center gap-5 md:gap-10 md:min-h-64`}
-              >
-                {/* IMAGE  */}
-                <div className="w-full md:w-1/2 md:h-full my-auto aspect-video rounded-lg overflow-hidden flex items-center justify-center">
-                  <img src={photoPath} alt={photoAlt} className="w-full h-full object-contain" />
-                </div>
-
-                <div className="w-full md:w-1/2 md:h-full text-left">
-                  <h1 className="font-bold text-4xl text-titleColor text-center md:text-left">
-                    {title}
-                  </h1>
-                  <p className="mt-3">{description}</p>
-                </div>
+          ({ title, description, photoPath, photoAlt }, idx) => (
+            <div
+              key={`event-${idx}`}
+              id={titleCaseToId(title)}
+              className={`flex flex-col ${
+                (idx + (startIdx || 0)) % 2 === 0
+                  ? "md:flex-row"
+                  : "md:flex-row-reverse"
+              } w-full max-w-6xl mx-auto items-center justify-center gap-8 md:gap-16`}
+            >
+              <div className="relative w-full md:w-1/2 aspect-video rounded-md overflow-hidden shrink-0">
+                <Image 
+                  src={photoPath} 
+                  alt={photoAlt} 
+                  fill 
+                  className="object-contain" 
+                />
               </div>
-            )
-          )}
+
+              <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
+                <h2 className="font-bold text-3xl md:text-4xl text-titleColor mb-4">
+                  {title}
+                </h2>
+                <p className="text-base md:text-xl leading-relaxed text-gray-700">
+                  {description}
+                </p>
+              </div>
+            </div>
+          )
+        )}
         </div>
       </div>
     </>
