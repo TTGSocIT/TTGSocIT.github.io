@@ -11,7 +11,7 @@ const aboutHashMap = [
       "At TTGSoc, you’ll find a thriving community where you can build meaningful connections in a welcoming and casual space. In a university of over 60,000 students, tabletop games offer a great way to meet new people—and who knows where your interests might take you? Many of our members share a love for art, rhythm games, bouldering, and even Valorant. We’ve even had longtime members with no prior interest in tabletop games join our weekly sessions and subcommittee just for the people and the fun atmosphere!",
 
     // image aspect ratio is 16:9
-    photoPath: "assets/events_pictures/regular/cropped_bgames.webp",
+    photoPath: "/assets/events_pictures/regular/about_home_image.jpeg",
     photoAlt: "People playing boardgames at our weekly boardgame events",
   },
   {
@@ -29,9 +29,9 @@ const aboutHashMap = [
   {
     title: "Collaboration Prospects",
     description:
-      "We are very welcoming to any collaboration inquiries from university societies, businesses or individuals! Over the past few years, we have been a consistent and successful partner for events such as MegaLAN, CRITS, and inter-university events. We have a large audience of boardgame enjoyers, longtime TCG players, and experienced dungeon masters.Please contact us via email, or through any of our socials to learn more about what we can offer for your event.?",
+      "We welcome collaboration inquiries from university societies, businesses, and individuals! Over the past few years, we have been a consistent and successful partner for events such as MegaLAN, CRITS, and inter-university events. We have a large audience of board game enthusiasts, longtime TCG players, and experienced dungeon masters. Please contact us via email or through any of our socials to learn more about what we can offer for your event.",
 
-    photoPath: "assets/events_pictures/regular/Aerospace Collab.webp",
+    photoPath: "/assets/events_pictures/regular/collab_image.jpg",
     photoAlt: "People playing boardgames at our weekly boardgame events",
 
     timeStr: "",
