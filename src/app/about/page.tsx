@@ -19,9 +19,8 @@ const aboutHashMap = [
     description:
       "We welcome all collaboration inquiries from university societies, businesses and individuals! Over the years, we’ve been a reliable and successful partner for events like MegaLAN, CRITS, and inter-university tournaments. Our community includes a wide audience of board game enthusiasts, seasoned TCG players, and experienced dungeon masters, making us a great fit for a variety of gaming-related events.If you're interested in partnering with us, feel free to reach out via email or any of our socials to explore what we can offer for your event.",
 
-
-    photoPath: "/Sponsorships_new.webp",
-    photoAlt: "People playing boardgames at our weekly boardgame events",
+    photoPath: "/assets/events_pictures/regular/about_sponsors.png",
+    photoAlt: "Image of mascot with sponsor logos",
 
     timeStr: "",
     locationStr: "",

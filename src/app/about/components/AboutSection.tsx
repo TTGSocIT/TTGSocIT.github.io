@@ -39,8 +39,8 @@ export default function AboutSection({ aboutListHashmap, startIdx }: Props) {
    */
 
   return (
-    <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center justify-center">
-      <div className="mt-10 flex flex-col items-center gap-20 px-10 md:px-[15dvw]">
+    <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center">
+      <div className="flex flex-col items-center gap-20 px-10 w-full max-w-7xl">
         {aboutListHashmap.map(
           (
             {
@@ -65,7 +65,7 @@ export default function AboutSection({ aboutListHashmap, startIdx }: Props) {
             >
               {/* IMAGE  */}
               <div className="w-full md:w-1/2 md:h-full my-auto aspect-video rounded-lg overflow-hidden">
-                <Image src={photoPath} alt={photoAlt} width={850} height={450}/>
+                <Image src={photoPath} alt={photoAlt} width={1600} height={900}/>
               </div>
 
               <div className="w-full md:w-1/2 md:h-full text-left">
