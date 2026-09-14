@@ -8,6 +8,7 @@ import { RubricApiResponse, type RubricEvent } from "./types";
 
 // Page showing all upcoming and past events (pulled from rubric API)
 export default function Schedule() {
+  const [todayEvents, setTodayEvents] = useState<RubricEvent[]>([]);
   const [upcomingEvents, setUpcomingEvents] = useState<RubricEvent[]>([]);
   const [pastEvents, setPastEvents] = useState<RubricEvent[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -42,11 +43,25 @@ export default function Schedule() {
           (sec) => sec.sectionname === "Events"
         );
 
-        if (eventsSection && eventsSection.array) {
-          const allEvents: RubricEvent[] = eventsSection.array;
+        if (eventsSection?.array) {
+          const allEvents = eventsSection.array;
+          const now = new Date();
+          const todayString = now.toLocaleDateString("en-GB", {
+            weekday: "short",
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          });
+          const isToday = (event: RubricEvent) =>
+            event.formatteddate.includes(todayString);
 
-          setUpcomingEvents(allEvents.filter((e) => e.upcoming === 1));
-          setPastEvents(allEvents.filter((e) => e.upcoming === 0));
+          setTodayEvents(allEvents.filter((e) => isToday(e)));
+          setUpcomingEvents(
+            allEvents.filter((e) => e.upcoming === 1 && !isToday(e)),
+          );
+          setPastEvents(
+            allEvents.filter((e) => e.upcoming === 0 && !isToday(e)),
+          );
         }
       } catch (err) {
         console.error("Error fetching schedule:", err);
@@ -72,6 +87,18 @@ export default function Schedule() {
           </div>
         ) : (
           <>
+            {/* Today's EVENTS SECTION */}
+            {todayEvents.length > 0 && (
+              <section>
+                <h2 className={headerClasses}> {"Today's events"} </h2>
+                <div className={gridClasses}>
+                  {todayEvents.map((event) => (
+                    <EventCard key={event.eventid} event={event} />
+                  ))}
+                </div>
+              </section>
+            )}
+
             {/* UPCOMING EVENTS SECTION */}
             {upcomingEvents.length > 0 && (
               <section>
