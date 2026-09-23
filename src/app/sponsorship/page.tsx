@@ -15,7 +15,7 @@ const majorSponsorshipMap = [
   },
   {
     title: "Jane Street",
-    description: "Jane Street is a quantitative trading firm with offices worldwide. We hire smart, humble people who love to solve problems, build systems, and test theories. You’ll learn something new every day in our office—whether it’s connecting with a colleague to share perspectives, or participating in a talk, class, or game night. Our success is driven by our people and we never stop improving.",
+    description: "Jane Street is a quantitative trading firm with offices worldwide. We hire smart, humble people who love to solve problems, build systems, and test theories. You’ll learn something new every day in our office—whether it’s connecting with a colleague to share perspectives, or participating in a talk, class, or game night. Our success is driven by our people and we never stop improving. \n- Jane St",
     photoPath: "/assets/sponsorships-logos/jane-street.png",
     photoAlt: "Jane Street's logo",
   }];
