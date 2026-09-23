@@ -1,7 +1,6 @@
 "use client";
 
 import { titleCaseToId } from "@/app/utils/titleCaseToId";
-import ImageScrollTitle from "./ImageScrollTitle";
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
@@ -14,8 +13,6 @@ import Image from "next/image";
  */
 
 type Props = {
-  title: string;
-  titleImgPath: string;
   sponsorshipslistHashmap: SponsorshipMap[];
   startIdx?: number;
 };
@@ -28,8 +25,6 @@ type SponsorshipMap = {
 };
 
 export default function SponsorshipsSection({
-  title,
-  titleImgPath,
   sponsorshipslistHashmap,
   startIdx,
 }: Props) {
@@ -68,8 +63,7 @@ export default function SponsorshipsSection({
 
   return (
     <>
-      <ImageScrollTitle title={title} imgPath={titleImgPath} />
-      <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center justify-center">
+      <div className="w-full relative overflow-hidden flex flex-col items-center justify-center">
         {/* NOTE: CAN CHANGE BACKGROUND IMG HERE */}
         <div className="flex flex-col items-center gap-20 px-6 md:px-10 w-full max-w-6xl">
           {sponsorshipslistHashmap.map(
