@@ -29,14 +29,7 @@ const regularEventsHashmap = [
     // image aspect ratio is 16:9
     photoPath: "/Friday_Boardgames.webp",
     photoAlt: "People playing boardgames at our weekly boardgame events",
-
-    timeStr: "Thursdays · 4–9pm",
-    locationStr:
-      "Morven Brown G06",
-    secondaryTimeStr: "Fridays · 4–9pm",
-    secondaryLocationStr:
-      "Mathews 104 & 103",
-    updatedLast: "27th of May 2026",
+    showScheduleLink: true,
 
     // incase you want to add buttons or something below the page to show off stuff. Can probably leave out for now in doing basic styling
    // optionalBottomJsx: (
@@ -52,10 +45,7 @@ const regularEventsHashmap = [
 
     photoPath: "/RPG_table.webp", // Reusing the DND campaign image
     photoAlt: "People playing a tabletop RPG session",
-
-    timeStr: "Alternating Sundays 12pm - 6pm",
-    locationStr: "Goldstein G02, G03, G04, G05",
-    updatedLast: "27th of May 2026",
+    showScheduleLink: true,
   },
   {
     title: "DND Campaign",
@@ -64,22 +54,17 @@ const regularEventsHashmap = [
 
     photoPath: "/lost_lands_dnd.webp",
     photoAlt: "People playing a D&D session at our fortnightly campaign events",
-
-    timeStr: "Alternating Sundays 12pm - 6pm",
-    locationStr: "Goldstein G02, G03, G04, G05 ",
     updatedLast: "27th of May 2026",
+    showScheduleLink: true,
   },
   {
     title: "TCG Weekly Events ",
     description:
-      "Are you a Master Duelist, Pokémon trainer, Planeswalker, or DigiDestined? If you answered yes,  or even no - there’s a place for you in our TCG community! Join us for weekly tournaments, exclusive member discounts, and the chance to learn new card games in a fun and welcoming environment. Whether you're a seasoned pro or just starting out, you'll find plenty of friendly players ready to trade, battle, and share their love for TCGs!",
+      "Are you a Master Duelist, Riftbounder, Pokémon trainer, Planeswalker, or DigiDestined? If you answered yes,  or even no - there’s a place for you in our TCG community! Join us for weekly tournaments, exclusive member discounts, and the chance to learn new card games in a fun and welcoming environment. Whether you're a seasoned pro or just starting out, you'll find plenty of friendly players ready to trade, battle, and share their love for TCGs!",
 
     photoPath: "tcg2.webp",
     photoAlt: "A collection of Trading cards",
-
-    timeStr: "Fridays 4pm - 9pm",
-    locationStr: "Mathews 104 & 103",
-    updatedLast: "27th of May 2026",
+    showScheduleLink: true,
   },
 ];
 
@@ -91,9 +76,6 @@ const specialEventsHashmap = [
     description:
       "Promoting the joy of tabletop games to more people has always been a core value of our society. As such, many of our large-scale events are hosted in collaboration with other UNSW societies. In 2024, some of our most successful events are organised with AnimeUNSW, EduSoc, QuantSoc and more! These events usually add a fun twist to our strategy games, such as cosplay, food, and trivia. Check out photos from some of our past events on our socials!",
 
-    // timeStr: "TIME HERE",
-    //locationStr: "LOCATION HERE",
-
     photoPath: "/maid_cafe.webp",
     photoAlt: "A photo of a collabaration with a anime socicety ",
   },
@@ -101,9 +83,6 @@ const specialEventsHashmap = [
     title: "TCG Competitions",
     description:
       "Not only is our society a platform for trading card gamers to collect, trade and play, we also run frequent TCG events that are catered to all players. From tournaments, to drafting, and to casual formats, our dedicated team of TCG enthusiasts creates fun and unique events for all to enjoy. Some of our most popular titles include Magic the Gathering, Yu-Gi-Oh, and Vanguard. However, no matter how niche your game of choice may be, you are more than likely to find like-minded individuals in our discord server.",
-
-    // timeStr: "TIME HERE",
-    //locationStr: "LOCATION HERE",
 
     photoPath: "/comp.webp",
     photoAlt: "A photo of yu-gi-oh cards ",
