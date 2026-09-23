@@ -3,6 +3,7 @@
 import { titleCaseToId } from "@/app/utils/titleCaseToId";
 import ImageScrollTitle from "./ImageScrollTitle";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
@@ -23,16 +24,11 @@ type Props = {
 type EventsMap = {
   title: string;
   description: string;
-
-  timeStr?: string;
-  locationStr?: string;
-  secondaryTimeStr?: string;
-  secondaryLocationStr?: string;
-  updatedLast?: string;
-  optionalBottomJsx?: React.ReactElement; // IDK the type here for JSX ima do any
-
   photoPath: string;
   photoAlt: string;
+  showScheduleLink?: boolean;
+  scheduleText?: string; // Specific text can be provided otherwise default to "time and location varies by term"
+  optionalBottomJsx?: React.ReactElement; // Optional jsx elements
 };
 
 export default function EventsSection({
@@ -77,21 +73,17 @@ export default function EventsSection({
   return (
     <>
       <ImageScrollTitle title={title} imgPath={titleImgPath} />
-      <div className="min-h-screen w-full relative overflow-hidden flex flex-col items-center justify-center">
-        {/* NOTE: CAN CHANGE BACKGROUND IMG HERE */}
+      <div className="w-full relative flex flex-col items-center justify-center">
         <div className="flex flex-col items-center gap-20 px-6 md:px-10 w-full max-w-7xl">
           {eventslistHashmap.map(
             (
               {
                 title,
                 description,
-                timeStr,
-                locationStr,
-                secondaryTimeStr,
-                secondaryLocationStr,
-                updatedLast,
                 photoPath,
                 photoAlt,
+                showScheduleLink,
+                scheduleText = "Times & locations vary by term · Check the schedule",
                 optionalBottomJsx,
               },
               idx
@@ -105,6 +97,7 @@ export default function EventsSection({
                     : "lg:flex-row-reverse"
                 } w-full justify-center gap-5 md:gap-10 md:min-h-64`}
               >
+                {/* Event Image */}
                 <div className="relative w-full lg:w-1/2 lg:h-full my-auto aspect-video rounded-lg overflow-hidden">
                   <Image
                     src={photoPath.startsWith("/") ? photoPath : `/${photoPath}`}
@@ -115,49 +108,42 @@ export default function EventsSection({
                   />
                 </div>
 
+                {/* Event Details */}
                 <div className="w-full lg:w-1/2 lg:h-full text-left">
                   <h1 className="font-bold text-4xl text-titleColor text-center lg:text-left">
                     {title}
                   </h1>
-                  {(timeStr ||
-                    locationStr ||
-                    secondaryTimeStr ||
-                    secondaryLocationStr) && (
-                    <div className="grid w-fit max-w-full grid-cols-[auto_minmax(0,1fr)] gap-x-6 italic text-gray-700 mx-auto lg:mx-0">
-                      {[
-                        { time: timeStr, location: locationStr },
-                        {
-                          time: secondaryTimeStr,
-                          location: secondaryLocationStr,
-                        },
-                      ]
-                        .filter(({ time, location }) => time || location)
-                        .flatMap(({ time, location }, rowIdx) => [
-                          time ? (
-                            <h2
-                              key={`time-${rowIdx}`}
-                              className="text-subTitleColor whitespace-nowrap"
-                            >
-                              {time}
-                            </h2>
-                          ) : null,
-                          location ? (
-                            <h2
-                              key={`location-${rowIdx}`}
-                              className="text-subTitleColor text-left"
-                            >
-                              {location}
-                            </h2>
-                          ) : null,
-                        ])}
+
+                  {showScheduleLink && (
+                    <div className="mb-4">
+                      <Link
+                        href="/schedule"
+                        className="inline-flex items-center gap-2 text-lg md:text-xl font-medium text-subTitleColor hover:text-titleColor transition-colors group"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 opacity-75 group-hover:opacity-100 transition-opacity"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={1.75}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <span className="underline underline-offset-4 decoration-neutral-300 group-hover:decoration-current transition-all">
+                          {scheduleText}
+                        </span>
+                        <span className="text-sm transition-transform duration-200 group-hover:translate-x-1">
+                          &rarr;
+                        </span>
+                      </Link>
                     </div>
                   )}
-                  {updatedLast && (
-                    <h3 className="opacity-50 italic text-subTitleColor">
-                      Last Updated: {updatedLast}
-                    </h3>
-                  )}
-                  <p className="mt-3">{description}</p>
+                  <p className="mt-1">{description}</p>
                   {optionalBottomJsx}
                 </div>
               </div>
